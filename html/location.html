@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/mypublic.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+	    initSize();
+	    function initSize(){
+		    var  screenW = document.documentElement.clientWidth || document.body.clientWidth;
+		    var oHtml = document.getElementsByTagName('html')[0]
+		    var size = 100 * screenW / 640 + 'px'
+		    oHtml.style.fontSize = size;
+	    }
+    </script>
+    <title>收货地址</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="hd-left"> </a>
+        <h1 class="hd-title">收货地址</h1>
+    </header>
+    <main>
+        <section class="card-local">
+           <h3>杭州九堡青年公寓31622室</h3>
+            <p>
+                <span>陈某人</span>
+                <span>18666666</span>
+            </p>
+            <i class="icon-pen"></i>
+        </section>
+    </main>
+    <footer>
+        <div class="local-add">
+            <i class="icon-plus"></i><span class="">新增地址</span>
+        </div>
+    </footer>
+</body>
+</html>

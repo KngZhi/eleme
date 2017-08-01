@@ -1,0 +1,21 @@
+header {
+  height: .9rem;
+  color: #fff;
+  background: #0298ff;
+  position: relative;
+}
+
+.hd-left {
+  position: absolute;
+  width: .22rem;
+  height: .90rem;
+  left: .32rem;
+  background: url("../images/back-arr.png") center no-repeat;
+  background-size: contain;
+}
+
+.hd-title {
+  text-align: center;
+  font: 700 .36rem/.9rem 'microsoft yahei';
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--<link rel="stylesheet" href="../css/mobilereset.css">-->
+    <link rel="stylesheet" href="../css/mypublic.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.js"></script>
+    <title>密码登录</title>
+    <script>
+	    var screenW = window.screen.width;
+	    var oHtml = $("html");
+	    oHtml.css("fontSize",100*screenW/640 + "px")
+        console.log(oHtml.css('fontSize'))
+    </script>
+</head>
+<body>
+    <header class="space-bt-row">
+        <a href="#" class="hd-left">
+        </a>
+        <h1 class="hd-title">密码登录</h1>
+    </header>
+    <main class="login">
+        <div class="account-wrap">
+            <input type="text" name="username" placeholder="用户/邮箱/用户名">
+            <input type="password" name="password" placeholder="密码">
+        </div>
+        <section>
+            <button class="btn-confirm">登录</button>
+            <a href="#">忘记密码？</a>
+        </section>
+    </main>
+    <footer>
+        <!--<h3>第三方登录</h3>-->
+        <!--<section>-->
+            <!--<a href="#">微信</a>-->
+            <!--<a href="#">QQ</a>-->
+            <!--<a href="#">微薄</a>-->
+        <!--</section>-->
+    </footer>
+</body>
+</html>

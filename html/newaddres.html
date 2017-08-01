@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/mypublic.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+			initSize();
+			function initSize(){
+				var  screenW = document.documentElement.clientWidth || document.body.clientWidth;
+				var oHtml = document.getElementsByTagName('html')[0]
+				var size = 100 * screenW / 640 + 'px'
+				oHtml.style.fontSize = size;
+			}
+    </script>
+    <title>新增地址</title>
+</head>
+<body>
+<header>
+    <a href="#" class="hd-left"> </a>
+    <h1 class="hd-title">收货地址</h1>
+</header>
+<main class="page-newlocal">
+    <section class="page-new">
+       <div class="row">
+           <div class="row-title">
+               联系人
+           </div>
+           <div class="row-content">
+               <input type="text" name="username" id="username" placeholder="姓名">
+           </div>
+       </div>
+
+        <div class="row-spec">
+            <div class="row-content">
+                <button class="btn-option">先生</button>
+                <button class="btn-option">女士</button>
+            </div>
+        </div>
+        <div>
+            <div class="row-title">
+                电话
+            </div>
+            <div class="row-content">
+                <input type="tel" placeholder="收货人电话">
+                <span class="contact">+ 通讯录</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-title">地址</div>
+            <div class="row-content">
+                <input type="text" placeholder="小区/写字楼/学校等">
+                <i class="icon-gt">&gt;</i>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-content">
+                <input class="row-spec" type="text" placeholder="详细地址">
+            </div>
+        </div>
+
+        <div>
+            <div class="row-title">门牌号</div>
+            <div class="row-content">
+                <input type="text" placeholder="例：5号楼203室">
+            </div>
+        </div>
+
+        <div>
+            <div class="row-title">标签</div>
+            <div class="row-content">
+                <button class="btn-option">家</button>
+                <button class="btn-option">公司</button>
+                <button class="btn-option">学校</button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="page-new-ft">
+    <button class="btn-confirm">确定</button>
+</footer>
+</body>
+</html>

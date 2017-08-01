@@ -1,0 +1,49 @@
+.space-bt-row {
+  margin-bottom: .3rem;
+}
+
+%btn {
+  text-align: center;
+}
+
+.btn-confirm {
+  @extend %btn;
+  background: #56d175;
+  color: #ffffff;
+  border-radius: .1rem;
+}
+
+.btn-option {
+  @extend %btn;
+  width: 1.36rem;
+  font: 400 .26rem/.56rem '';
+  color: #666666;
+  text-align: center;
+  border:1px solid #EFEFEF;
+  border-radius: .06rem;
+  background: #ffffff;
+}
+%icon {
+  display: inline-block;
+}
+.icon-pen {
+  @extend %icon;
+  background: url(../images/icon-pen.png) no-repeat center;
+}
+
+.icon-plus {
+  @extend %icon;
+  background: url(../images/icon-plus.png) no-repeat left center;
+  background-size: .4rem;
+  width: .4rem;
+  margin-right: .17rem;
+}
+
+.icon-gt {
+  @extend %icon;
+  color:#C7C7C7;
+  font-size: .26rem;
+  font-weight: 700;
+  float: right;
+  margin-right: .23rem;
+}
