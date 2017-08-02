@@ -58,7 +58,6 @@
 	            window.addEventListener("message", function(e){
 	            	localStorage.setItem('specAdd', JSON.stringify(e.data))
 	                window.location.href = 'create-address.html'
-	                alert('您选择了:' + e.data.name + ',' + e.data.location)
 	            }, false);
             
             
@@ -66,14 +65,11 @@
 				alert('Geolocation error: ' + e.message);
 			});
 
-			
-
             $('.hd-left').on('click', function () {
                 window.location.href="create-address.html"
             })
-            
-            
 		}
+
     </script>
 </body>
 </html>
