@@ -1,1 +1,23 @@
-null
+{
+	"create-address.html": {
+		"resources": [
+			"css/style.css",
+			"images/back-arr.png",
+			"css/mypublic.css",
+			"js/jquery.js",
+			"search-address.html"
+		],
+		"refer": [
+			"search-address.html"
+		]
+	},
+	"search-address.html": {
+		"resources": [
+			"js/mui.min.js",
+			"create-address.html"
+		],
+		"refer": [
+			"create-address.html"
+		]
+	}
+}

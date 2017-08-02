@@ -189,5 +189,59 @@
 				}
 			},"debug":true
 		}
-	},"fullscreen":true
+	},"fullscreen":true,
+	"dependencies": {
+		"pages": {
+			"create-address.html": {
+				"resources": [
+					"css/style.css",
+					"images/back-arr.png",
+					"css/mypublic.css",
+					"js/jquery.js",
+					"search-address.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"search-address.html": {
+				"resources": [
+					"js/mui.min.js",
+					"create-address.html"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"images/login.png",
+				"login.html",
+				"sass/_login.scss",
+				"sass/_local.scss",
+				"images/icon-weather.png",
+				"images/local-detail.jpg",
+				"images/local-new.png",
+				"sass/_header.scss",
+				"js/mui.js",
+				"images/contact.jpg",
+				"README.md",
+				"fonts/mui.ttf",
+				"images/icon-plus.png",
+				"css/mui.css",
+				"js/current-local.js",
+				"sass/_mixin.scss",
+				"css/style.css.map",
+				"index.html",
+				"address.html",
+				"images/icon-pen.png",
+				"js/zepto.min.js",
+				"sass/_other.scss",
+				"css/mui.min.css",
+				"images/profile.png",
+				"css/mobilereset.css",
+				"images/local-shouhuo.png",
+				"sass/style.scss"
+			]
+		}
+	}
 }
