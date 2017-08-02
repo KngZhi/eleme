@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="http://webapi.amap.com/maps?v=1.3&key=e90209757e5e834b63a2b25007af3bf2"></script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+
+	    initSize();
+	    function initSize(){
+		    var  screenW = document.documentElement.clientWidth || document.body.clientWidth;
+		    var oHtml = document.getElementsByTagName('html')[0]
+		    var size = 100 * screenW / 640 + 'px'
+		    oHtml.style.fontSize = size;
+	    }
+
+    </script>
+    <style>
+       html, body {
+           margin: 0;
+           width: 100%;
+           height: 100%;
+       }
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body class="page-search">
+    <header>
+        <div class="hd-left"></div>
+    </header>
+    <script src="js/mui.min.js"></script>
+    <script>
+        $(function () {
+        })
+	    $(function(){
+//            function  curAdd() {
+//                plus.geolocation.getCurrentPosition(function (p) {
+//                     纬度，经度
+//                    var local = [p.coords.longitude, p.coords.latitude]
+//                    window.localStorage.setItem('curAdd', local)
+//                })
+//            }
+//            curAdd()
+            var center = localStorage.getItem('curAdd')
+            var $iframe = $('<iframe id="map" src="https://m.amap.com/picker/?center='+center+'&amp;key=608d75903d29ad471362f8c58c550daf"></iframe>')
+            $('body').append($iframe)
+
+            // 返回对象
+            var iframe = document.getElementById('map').contentWindow;
+            console.log(iframe)
+            document.getElementById('map').onload = function(){
+                iframe.postMessage('hello','https://m.amap.com/picker/')
+            };
+            window.addEventListener("message", function(e){
+            	localStorage.setItem('specAdd', JSON.stringify(e.data))
+                window.location.href = 'create-address.html'
+                alert('您选择了:' + e.data.name + ',' + e.data.location)
+            }, false);
+
+            $('.hd-left').on('click', function () {
+                window.location.href="create-address.html"
+            })
+	    }())
+    </script>
+</body>
+</html>

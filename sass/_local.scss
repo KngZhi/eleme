@@ -46,6 +46,7 @@
 }
 
 .page-new {
+  overflow: hidden;
   background: #ffffff;
   & > div {
     margin-left: .3rem;
@@ -65,10 +66,10 @@
     .row-content {
       flex: 1;
       padding: .3rem 0;
-      input::-webkit-input-placeholder {
-        font: 400 .28rem/.86rem '';
-        color: #cacad0;
-      }
+      //input::-webkit-input-placeholder {
+        //font: 400 .28rem/.86rem '';
+        //color: #cacad0;
+      //}
 
       input {
         font-size: .28rem;
@@ -76,6 +77,7 @@
     }
 
   }
+  
 
   .row-spec {
     padding-left: 1.44rem;
@@ -101,4 +103,13 @@
   color: #0196ff;
   float: right;
   margin-right: .23rem;
+}
+
+.page-search {
+  header {
+    position: fixed;
+    top: 0;
+    height: .95rem;
+    width: 100%;
+  }
 }
