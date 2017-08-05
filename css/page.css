@@ -189,8 +189,11 @@ html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino San
 .L_eva .eva-title small{font-size:0.18rem ;color: #cdcdcd;}
 .L_eva .eva-box h3 span{font: 0.24rem/0.45rem '';color: #333333;float: left;}
 .L_eva .eva-box h3 .img-box{float: right;margin-bottom: .2rem;}
-.L_eva .eva-box h3 img{width: 0.45rem;height: 0.45rem;display: inline-block;margin-left: .12rem;}
+/*.L_eva .eva-box h3 img{width: 0.45rem;height: 0.45rem;display: inline-block;margin-left: .12rem;}*/
+.L_eva .eva-box h3 i{font-size: .5rem;display: inline-block;margin-left: .12rem;}
+.L_eva .eva-box h3 i.on{color: #ffa806;}
 .L_eva .mark-box a{font: .2rem/.4rem '';height: .4rem;padding: 0 .2rem;color: #cdcdcd;display: inline-block;border: 1px solid #cdcdcd;border-radius: .06rem;margin-bottom: .2rem;margin-right: .1rem;}
+.L_eva .mark-box a.on{color: #0af;border-color:#0085ff ;}
 .L_eva textarea{width: 100%;padding:0.14rem 0.17rem;border:1px solid #cdcdcd;box-sizing:border-box;font: 0.22rem/0.32rem '';}
 .L_eva .eva-time{height:0.86rem ;background: #FFFFFF;color: #333333;padding: 0 0.25rem;margin-top: .26rem;font: .26rem/.86rem '';}
 .L_eva .eva-time p{float: left;}
