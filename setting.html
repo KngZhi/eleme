@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>设置</title>
+		<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script type="text/javascript" src="js/public.js"></script>
+	</head>
+	<body>
+		<div class="P_L_container">
+			<div class="P_L_header">
+				<i class="fa fa-angle-left return-pages-btn" aria-hidden="true" onclick="returnPages()"></i>
+				设置
+			</div>
+			<section class="L_setting L_flex_content">
+				<ul class="common-ul">
+					<li>账号与安全<span>开启小额免密支付</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li>通用<i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+				<ul class="common-ul">
+					<li>关于饿了么<i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+				<a class="login-out-btn">退出登录</a>
+			</section>
+		</div>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			$('.login-out-btn').on('click',function(){
+				localStorage.clear('user');
+				window.location.href='login.html';
+			})
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>账户信息</title>
+		<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script type="text/javascript" src="js/public.js"></script>
+	</head>
+	<body>
+		<div class="P_L_container">
+			<div class="P_L_header">
+				<i class="fa fa-angle-left return-pages-btn" aria-hidden="true" onclick="returnPages()"></i>
+				账号信息
+			</div>
+			<section class="L_user_info L_flex_content">
+				<ul class="common-ul">
+					<li class="li-img">头像<img src="img/user-info-header.png" /><i class="fa fa-angle-right nav-right"></i></li>
+					<li>用户名<span class='username'>某某某</span><i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+				<p class="ul-title">账号绑定</p>
+				<ul class="common-ul">
+					<li>手机<span class="tel">158****2312</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li>微信<span class="no-value">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li>QQ<span class="no-value">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li>微博<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li>淘宝<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+				<p class="ul-title">安全设置</p>
+				<ul class="common-ul">
+					<li>登录密码<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li>支付密码<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li>小额免密支付<i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+			</section>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			var Storage =JSON.parse(localStorage.getItem('user'));
+			if(Storage !=null){
+				var username = $('.username');
+				var tel = $('.tel')
+				username.html(Storage.username)
+				tel.html(Storage.tel);
+				document.addEventListener('plusready',plusReady,false);
+				
+				
+				
+				
+			}else{
+				
+			}
+			
+			
+			function plusReady(){
+				galleryImg()
+				
+				
+			}
+			
+			function galleryImg(){
+				// 从相册中选择图片
+			    plus.gallery.pick(function(path){
+			    	console.log(path);
+			        showImg( path );
+			        createItem(path);
+			    }, function(e){
+//			    	outSet('取消选择图片');
+			    }, {filter:'image'});
+			}
+			
+			
+			
+			function showImg(url){
+			// 兼容以"file:"开头的情况
+			if(0!=url.indexOf('file://')){
+				url='file://'+url;
+			}
+			var _body_ = document.body;
+			var _div_ = document.createElement('div');
+			_div_.style.top='0px';
+			_div_.style.left='0px';
+			_div_.style.height='30%';
+			_div_.style.width='30%';
+			_div_.style.zIndex='99999';
+			_div_.style.position='fixed';
+			_div_.style.background='#ffffff';
+			_div_.id='imgShow';
+			_div_.onclick=closeImg;
+			var _img_=document.createElement('img');
+			_img_.src=url;
+			_img_.style.width='100%';
+			_body_.appendChild(_div_);
+			_div_.appendChild(_img_);
+		}
+			
+		function closeImg(){
+			var trnode=document.getElementById('imgShow');
+			trnode&&trnode.parentNode.removeChild(trnode);
+		}	
+		function createItem(path){
+			var li = document.createElement('li');
+			li.className = 'ditem';
+			li.innerHTML = '<span class="iplay"><font class="aname"></font><br/><font class="ainf"></font></span>';
+			li.setAttribute('onclick', 'displayMedia(this);' );
+			list.insertBefore(li, first.nextSibling);
+			var i = path.lastIndexOf('/');
+			if(i<0){
+				i = path.lastIndexOf('\\');
+			}
+			li.querySelector('.aname').innerText = path.substr(i+1);
+			li.querySelector('.ainf').innerText = path;
+			li.path = path;
+			// 设置空项不可见
+			first.style.display = 'none';
+		}	
+			
+		</script>
+		
+		
+	</body>
+</html>

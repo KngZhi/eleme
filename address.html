@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/mypublic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <title>收货地址</title>
+</head>
+<body>
+    <header>
+        <a href="javascript:;" class="hd-left" onclick="returnPages()"> </a>
+        <h1 class="hd-title">收货地址</h1>
+    </header>
+    <main>
+        <section class="card-local">
+           <h3>杭州九堡青年公寓31622室</h3>
+            <p>
+                <span>陈某人</span>
+                <span>18666666</span>
+            </p>
+            <i class="icon-pen"></i>
+        </section>
+    </main>
+    <footer>
+        <div class="local-add">
+            <i class="icon-plus"></i><span class="">新增地址</span>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/c-public.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+	        $('.local-add').on('click', function () {
+	        	var time = new Date().getTime()
+		        window.location.href = 'create-address.html?key=' + time
+	        })
+          
+          searchSession('user').forEach(function (val) {
+            addLocalCard(val)
+          })
+
+          // 创建地址卡片
+          function addLocalCard (key) {
+	          var localInfo = JSON.parse(localStorage.getItem(key))
+              var id = key.match(/\d+/g).join()
+	          var $card = $('<section class="card-local"></section>')
+	          var $title = $('<h3>'+localInfo.addName+localInfo.address+localInfo.doorNum+'</h3>')
+	          var $content = $('<p><span>'+localInfo.username+'</span><span>'+localInfo.tel+'</span></p>')
+	          var $icon = $('<i class="icon-pen" index="'+id+'"></i>')
+	          $card.append($title,$content,$icon)
+	          $('main').append($card)
+          }
+	        /**
+		         * @param name
+		         * @returns {Array.<*>} 返回数组，数组里面是 session key 值
+	         */
+          function searchSession(name) {
+        		var len = localStorage.length,
+                    i =0,
+                    orgList = []
+                for (i; i< len; i++) {
+	                orgList.push(localStorage.key(i))
+                }
+                var tarList = orgList.filter(function (ele) {
+                	// 如果 Key ^ 是name 则返回它的键值
+                  if (ele.indexOf(name) === 0) {
+	                  return ele
+                  }
+                })
+            console.log(tarList)
+            return tarList;
+          }
+
+          $('.icon-pen').on('click', function () {
+          	// 给每一张卡片唯一标识符, 方便查询和修改
+            var id = $(this).attr('index')
+            localStorage.getItem('user' + id)
+            window.location.href = 'alter-address.html?key=' + id
+          })
+        })
+    </script>
+</body>
+</html>

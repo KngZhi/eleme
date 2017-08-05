@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="http://webapi.amap.com/maps?v=1.3&key=e90209757e5e834b63a2b25007af3bf2"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+       html, body {
+           margin: 0;
+           width: 100%;
+           height: 100%;
+       }
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body class="page-search">
+    <header>
+        <a href="javascript:;" class="hd-left" onclick="returnPages()"> </a>
+    </header>
+    <script src="js/jquery.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/c-public.js"></script>
+    <script>
+//		document.addEventListener('plusready', onPlusReady, false);
+//		function onPlusReady(){
+//			plus.geolocation.getCurrentPosition(function(p){
+//				var center = p.coords.longitude+','+p.coords.latitude;
+//              console.log(center)
+//	           /* var $iframe = $('<iframe id="map" src="https://m.amap.com/picker/?center='+center+'&amp;key=608d75903d29ad471362f8c58c550daf"></iframe>')
+//	            $('body').append($iframe)
+//
+//	            // 返回对象
+//	            var iframe = document.getElementById('map').contentWindow;
+//	            console.log(iframe)
+//	            document.getElementById('map').onload = function(){
+//	                iframe.postMessage('hello','https://m.amap.com/picker/')
+//	            };
+//	            window.addEventListener("message", function(e){
+//	            	localStorage.setItem('specAdd', JSON.stringify(e.data))
+//	                window.location.href = 'create-address.html'
+//	            }, false)*/;
+//
+//                var $iframe = $('<iframe id="map" src="https://m.amap.com/picker/?center='+center+'&amp;key=608d75903d29ad471362f8c58c550daf"></iframe>')
+//                $('body').append($iframe)
+//
+//                var time = getParamByName('key')
+//                // 返回对象
+//                var iframe = document.getElementById('map').contentWindow;
+//                console.log(iframe)
+//                document.getElementById('map').onload = function(){
+//                    iframe.postMessage('hello','https://m.amap.com/picker/')
+//                };
+//                window.addEventListener("message", function(e){
+//                    localStorage.setItem('add'+ time, JSON.stringify(e.data));
+//                    window.history.back()
+//                }, false);
+//
+//			}, function(e){
+//				alert('Geolocation error: ' + e.message);
+//			});
+//		}
+
+		    // note: 用于 pc 页面的调试
+		    var center = '120.254653930664,30.30824279785155'
+		    console.log(center)
+		    var $iframe = $('<iframe id="map" src="https://m.amap.com/picker/?center='+center+'&amp;key=608d75903d29ad471362f8c58c550daf"></iframe>')
+		    $('body').append($iframe)
+
+            var time = getParamByName('key')
+
+            // 返回对象
+		    var iframe = document.getElementById('map').contentWindow;
+		    console.log(iframe)
+		    document.getElementById('map').onload = function(){
+			    iframe.postMessage('hello','https://m.amap.com/picker/')
+		    };
+		    window.addEventListener("message", function(e){
+                localStorage.setItem('add'+ time, JSON.stringify(e.data));
+                window.history.back()
+		    }, false);
+
+
+    </script>
+</body>
+</html>

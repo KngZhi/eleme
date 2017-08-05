@@ -1,0 +1,44 @@
+{
+	"index.html": {
+		"resources": [
+			"data/shops.json",
+			"data/ele-type.json",
+			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+			"js/bin/swiper-3.3.1.min.js",
+			"js/public.js",
+			"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+			"css/bin/mobilereset.css",
+			"css/page.css",
+			"js/bin/zepto.min.js",
+			"js/bin/iscroll-min.js",
+			"css/bin/swiper-3.3.1.min.css",
+			"img/ic_rating_s.png"
+		],
+		"refer": []
+	},
+	"meishi.html": {
+		"resources": [
+			"data/shops.json",
+			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+			"img/ic_rating_s.png",
+			"js/public.js",
+			"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+			"css/bin/mobilereset.css",
+			"css/page.css",
+			"js/bin/zepto.min.js"
+		],
+		"refer": []
+	},
+	"kfc.html": {
+		"resources": [
+			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+			"js/public.js",
+			"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+			"css/bin/mobilereset.css",
+			"css/page.css",
+			"img/kfc_logo.jpeg",
+			"data/shop-goods.json",
+			"js/bin/zepto.min.js"
+		]
+	}
+}

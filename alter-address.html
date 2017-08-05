@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/mypublic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <title>修改地址</title>
+</head>
+<body>
+<header>
+    <a href="javascript:;" class="hd-left" onclick="returnPages()"> </a>
+    <h1 class="hd-title">修改地址</h1>
+</header>
+<main class="page-newlocal">
+    <section class="page-new">
+        <div class="row">
+            <div class="row-title">
+                联系人
+            </div>
+            <div class="row-content">
+                <input type="text" name="username" id="username" placeholder="姓名">
+            </div>
+        </div>
+
+        <div class="row-spec">
+            <div class="row-content">
+                <button class="btn-option gender">先生</button>
+                <button class="btn-option gender">女士</button>
+            </div>
+        </div>
+        <div>
+            <div class="row-title">
+                电话
+            </div>
+            <div class="row-content">
+                <input type="tel" placeholder="收货人电话" id="tel">
+                <span class="contact" id="phoneBook">+ 通讯录</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-title">地址</div>
+            <div class="row-content" id="findAddress">
+                <input type="text" placeholder="小区/写字楼/学校等" readonly="readonly" id="addName">
+                <i class="icon-gt">&gt;</i>
+            </div>
+        </div>
+
+        <div>
+            <div class="row-content">
+                <input id="address" class="row-spec" type="text" placeholder="详细地址">
+            </div>
+        </div>
+
+        <div>
+            <div class="row-title">门牌号</div>
+            <div class="row-content">
+                <input type="text" placeholder="例：5号楼203室" id="doorNum">
+            </div>
+        </div>
+
+        <div class="df">
+            <div class="row-title valign">标签</div>
+            <div class="row-content">
+                <button class="btn-option">家</button>
+                <button class="btn-option">公司</button>
+                <button class="btn-option">学校</button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="page-new-ft">
+    <button class="btn-confirm">确定</button>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/c-public.js"></script>
+<script>
+/*	document.addEventListener('plusready', onPlusReady, false)
+	function onPlusReady () {
+		$(function () {
+			var id = getParamByName('key')
+			var localInfo = JSON.parse(localStorage.getItem('user' + id))
+			console.log(localInfo)
+			$.each($('input'), function (index, ele) {
+				ele.value = localInfo[ele.id]
+			})
+			autoFillAdd(id)
+
+			$tagsVal('input', function (data) {
+				setValToSession('user' + id, data)
+			})
+
+			$('.btn-confirm').on('click', function () {
+				window.location.href = 'address.html'
+			})
+
+			$('#findAddress').click(function () {
+				window.location.href = 'search-address.html?key=' + id
+			})
+		})
+	}*/
+
+
+    // note: pc端测试
+	$(function () {
+		var id = getParamByName('key')
+		var localInfo = JSON.parse(localStorage.getItem('user' + id))
+		console.log(localInfo)
+		$.each($('input'), function (index, ele) {
+			ele.value = localInfo[ele.id]
+		})
+		autoFillAdd(id)
+
+		$tagsVal('input', function (data) {
+			setValToSession('user' + id, data)
+		})
+
+		$('.btn-confirm').on('click', function () {
+			window.location.href = 'address.html'
+		})
+
+		$('#findAddress').click(function () {
+			window.location.href = 'search-address.html?key=' + id
+		})
+	})
+</script>
+</body>
+</html>
