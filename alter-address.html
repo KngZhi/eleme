@@ -15,12 +15,12 @@
 				oHtml.style.fontSize = size
 			}
     </script>
-    <title>新增地址</title>
+    <title>修改地址</title>
 </head>
 <body>
 <header>
     <a href="#" class="hd-left"> </a>
-    <h1 class="hd-title">新增地址</h1>
+    <h1 class="hd-title">修改地址</h1>
 </header>
 <main class="page-newlocal">
     <section class="page-new">
@@ -86,63 +86,54 @@
 <script src="js/jquery.js"></script>
 <script src="js/public.js"></script>
 <script>
-/*	document.addEventListener('plusready', onPlusReady, false);
-	function onPlusReady(){
-        $(function () {
-				console.log('run1')
-				var time = getParamByName('key')
-				$('#findAddress').on('click', function () {
-					window.location.href = 'search-address.html?key=' + time
-				})
-
-				autoFillAdd(time)
-
-				// 给标签按钮添加选中样式
-				$('.row-content .btn-option').on('click', function () {
-					$(this).addClass('btn-option-on').siblings().removeClass('btn-option-on')
-				})
-
-				// 提交表单
-				$('.btn-confirm').on('click', function () {
-					// todo: 验证电话号码
-					$tagsVal('input', function (res) {
-						setValToSession('user' + time, res)
-					})
-					$tagsVal('.btn-option-on', function (res) {
-						setValToSession('tags', res)
-					})
-					window.location.href = 'address.html'
-				})
+/*	document.addEventListener('plusready', onPlusReady, false)
+	function onPlusReady () {
+		$(function () {
+			var id = getParamByName('key')
+			var localInfo = JSON.parse(localStorage.getItem('user' + id))
+			console.log(localInfo)
+			$.each($('input'), function (index, ele) {
+				ele.value = localInfo[ele.id]
 			})
-    }*/
+			autoFillAdd(id)
 
-    //note: pc端测试
-    $(function () {
-			console.log('run1')
-			var time = getParamByName('key')
-			$('#findAddress').on('click', function () {
-				window.location.href = 'search-address.html?key=' + time
+			$tagsVal('input', function (data) {
+				setValToSession('user' + id, data)
 			})
 
-			autoFillAdd(time)
-
-			// 给标签按钮添加选中样式
-			$('.row-content .btn-option').on('click', function () {
-				$(this).addClass('btn-option-on').siblings().removeClass('btn-option-on')
-			})
-
-			// 提交表单
 			$('.btn-confirm').on('click', function () {
-				// todo: 验证电话号码
-				$tagsVal('input', function (res) {
-					setValToSession('user' + time, res)
-				})
-				$tagsVal('.btn-option-on', function (res) {
-					setValToSession('tags', res)
-				})
 				window.location.href = 'address.html'
 			})
+
+			$('#findAddress').click(function () {
+				window.location.href = 'search-address.html?key=' + id
+			})
 		})
+	}*/
+
+
+    // note: pc端测试
+	$(function () {
+		var id = getParamByName('key')
+		var localInfo = JSON.parse(localStorage.getItem('user' + id))
+		console.log(localInfo)
+		$.each($('input'), function (index, ele) {
+			ele.value = localInfo[ele.id]
+		})
+		autoFillAdd(id)
+
+		$tagsVal('input', function (data) {
+			setValToSession('user' + id, data)
+		})
+
+		$('.btn-confirm').on('click', function () {
+			window.location.href = 'address.html'
+		})
+
+		$('#findAddress').click(function () {
+			window.location.href = 'search-address.html?key=' + id
+		})
+	})
 </script>
 </body>
 </html>

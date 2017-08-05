@@ -4,18 +4,17 @@ header {
   background: #0298ff;
   position: relative;
 }
-
+$hdShape: .90rem, .90rem;
 .hd-left {
   position: absolute;
-  width: .22rem;
-  height: .90rem;
-  left: .32rem;
+  @include shape($hdShape...);
   background: url("../images/back-arr.png") center no-repeat;
-  background-size: contain;
+  background-size: .22rem;
 }
 
 .hd-title {
   text-align: center;
+  //@include font($hdFont...);
   font: 700 .36rem/.9rem 'microsoft yahei';
 }
 

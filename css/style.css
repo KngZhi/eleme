@@ -35,8 +35,8 @@
   margin-right: .17rem; }
 
 .icon-gt {
-  color: #C7C7C7;
-  font-size: .26rem;
+  font-size: 0.26rem;
+  color: #c7c7c7;
   font-weight: 700;
   float: right;
   margin-right: .23rem; }
@@ -49,11 +49,10 @@ header {
 
 .hd-left {
   position: absolute;
-  width: .22rem;
-  height: .90rem;
-  left: .32rem;
+  width: 0.9rem;
+  height: 0.9rem;
   background: url("../images/back-arr.png") center no-repeat;
-  background-size: contain; }
+  background-size: .22rem; }
 
 .hd-title {
   text-align: center;
@@ -105,7 +104,8 @@ header {
   background: #ffffff; }
 .card-local h3 {
   font: 700 .28rem/.42rem 'microsoft yahei';
-  color: #333333; }
+  color: #333333;
+  width: 90%; }
 .card-local p {
   font: 400 .24rem/.38rem 'microsoft yahei';
   color: #666666; }

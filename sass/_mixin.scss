@@ -1,5 +1,5 @@
-	$blue: #3190e8;  
-$bc: #e4e4e4;
+$blue: #0095FF;
+$bc: #F5F5F5;
 $fc:#fff;
 
 // 背景图片地址和大小
@@ -16,6 +16,7 @@ $fc:#fff;
     -o-border-radius: $radius;
     border-radius: $radius;
 }
+
 //定位全屏
 @mixin allcover{
 	position:absolute;
@@ -46,18 +47,18 @@ $fc:#fff;
 }
 
 //宽高
-@mixin wh($width, $height){
+@mixin shape($width, $height){
 	width: $width;
 	height: $height;
 }
 
 //字体大小、行高、字体
-@mixin font($size, $line-height, $family: 'Microsoft YaHei') {  
-	font: #{$size}/#{$line-height} $family;
+@mixin font($size, $line-height, $family: 'Microsoft YaHei', $weight:400) {
+	font: $weight #{$size}/#{$line-height} $family;
 }
 
 //字体大小，颜色
-@mixin sc($size, $color){
+@mixin fsizeCol($size, $color){
 	font-size: $size;
 	color: $color;
 }
@@ -66,5 +67,4 @@ $fc:#fff;
 @mixin fj($type: space-between){
 	display: flex;
 	justify-content: $type;
-
 }

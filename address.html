@@ -39,8 +39,54 @@
     </footer>
     <script src="js/jquery.js"></script>
     <script>
-        $('.local-add').on('click', function () {
-          window.location.href = 'create-address.html'
+        $(function () {
+	        $('.local-add').on('click', function () {
+	        	var time = new Date().getTime()
+		        window.location.href = 'create-address.html?key=' + time
+	        })
+          
+          searchSession('user').forEach(function (val) {
+            addLocalCard(val)
+          })
+
+          // 创建地址卡片
+          function addLocalCard (key) {
+	          var localInfo = JSON.parse(localStorage.getItem(key))
+              var id = key.match(/\d+/g).join()
+	          var $card = $('<section class="card-local"></section>')
+	          var $title = $('<h3>'+localInfo.addName+localInfo.address+localInfo.doorNum+'</h3>')
+	          var $content = $('<p><span>'+localInfo.username+'</span><span>'+localInfo.tel+'</span></p>')
+	          var $icon = $('<i class="icon-pen" index="'+id+'"></i>')
+	          $card.append($title,$content,$icon)
+	          $('main').append($card)
+          }
+	        /**
+		         * @param name
+		         * @returns {Array.<*>} 返回数组，数组里面是 session key 值
+	         */
+          function searchSession(name) {
+        		var len = localStorage.length,
+                    i =0,
+                    orgList = []
+                for (i; i< len; i++) {
+	                orgList.push(localStorage.key(i))
+                }
+                var tarList = orgList.filter(function (ele) {
+                	// 如果 Key ^ 是name 则返回它的键值
+                  if (ele.indexOf(name) === 0) {
+	                  return ele
+                  }
+                })
+            console.log(tarList)
+            return tarList;
+          }
+
+          $('.icon-pen').on('click', function () {
+          	// 给每一张卡片唯一标识符, 方便查询和修改
+            var id = $(this).attr('index')
+            localStorage.getItem('user' + id)
+            window.location.href = 'alter-address.html?key=' + id
+          })
         })
     </script>
 </body>

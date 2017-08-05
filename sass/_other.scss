@@ -43,11 +43,10 @@
   width: .4rem;
   margin-right: .17rem;
 }
-
+$gtSizeCol: .26rem, #c7c7c7;
 .icon-gt {
   @extend %icon;
-  color:#C7C7C7;
-  font-size: .26rem;
+  @include fsizeCol($gtSizeCol...);
   font-weight: 700;
   float: right;
   margin-right: .23rem;
