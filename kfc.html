@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="" content="" />
+		<title>KFC</title>
+		<link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css" />
+		<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script type="text/javascript" src="js/public.js"></script>
+		<script type="text/javascript" charset="utf-8"></script>
+  
+	</head>
+	<body>
+		<div class="E_kfc C_wrapper">
+			<div class="kfc_header">
+				<div class="top_Bar">
+					<a href="#" class="back"><i class="fa fa-angle-left return-pages-btn" aria-hidden="true" style="font-size: .4rem;" onclick="returnPages()"></i></a>
+					<div class="top_Bar_r">
+						<span>拼</span>
+						<span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+						<span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
+					</div>
+				</div>
+				<div class="info_wrap">
+					<a href="#" class="logo"><img src="img/kfc_logo.jpeg"/></a>
+					<div class="kfc_info">
+						<h3 class="title">肯德基宅急送　(九堡店) <i class="fa fa-chevron-right" aria-hidden="true"></i></h3>	
+						<p class="over notice">公告：本餐厅不使用饿了吗配送，由肯德基宅急送配送</p>
+						<div class="band"><span>品牌</span><span>商家配送 · 约40分钟</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+				<p><i class="subtract">特</i>7折饿了么回味桶，向经典致敬</p>
+				<p><i>新</i>新用户下单立减17元(不与其它活动同享)</p>
+			</div>
+			 
+			 <div class="tab_bar">
+			 	<span class="active">商品</span>
+			 	<span onclick="window.location='shop-eva.html'">评分4.7分</span>
+			 </div>
+			 
+			 
+			<div class="main">
+				<ul class="aside"></ul>
+				<div class="wrap">
+					<!--<div class="item">
+						<h3 class="title"><span>热销</span>大家喜欢吃,　才是真好吃</h3>
+						<div class="card">
+							<div class="imgs"><img src="https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/"/></div>
+							<div class="content">
+								<h3 class="shopname">两块香辣鸡翅</h3>
+								<p>香辣多汁，口感鲜美</p>
+								<p><span class="sale">月售<i class="saleCount">444</i>份</span><span class="grade">　好评率<i>100%</i></span></p>
+								<p>¥<i>99</i></p>
+							</div>
+							<span id="joinCar">+</span>
+						</div>
+					</div>-->
+				</div>
+				
+			</div>
+
+			<footer class="Kfc_footer">
+				<div class="sel_goods">
+					未选购商品
+					<div class="e_box"><span class="count">1</span></div>
+				</div>
+				<div class="carriage">
+					¥0起送
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/bin/zepto.min.js" ></script>
+		<script type="text/javascript">
+			$.ajax({
+				type:"get",
+				url:"./data/shop-goods.json",
+				async:true,
+				dataType:'json',
+				success:function(data){
+					console.log(data)
+					var $aside =$('.aside')
+					var $wrap = $('.wrap');
+					$.each(data, function(index) {
+						var $menu = $('<li><span>'+data[index].typeName+'</span></li>')
+						$aside.append($menu);
+						var $item = $('<div class="item"></div>')
+						var $title = $('<h3 class="title"><span>'+data[index].typeName+'</span>'+data[index].typeDes+'</h3>');
+						$item.append($title);
+						var goodsArr = data[index].goods;
+						$.each(goodsArr, function(index) {
+							var $card = $('<div class="card"></div>');
+							var $thisImg = $('<div class="imgs"><img src="'+goodsArr[index].img_url+'"/></div>');
+							console.log(goodsArr[index].img_url);
+							var $content = $('<div class="content"><h3 class="shopname">'+goodsArr[index].name+'</h3><p class="over">'+goodsArr[index].des+'</p><p><span class="sale">月售<i class="saleCount">'+goodsArr[index].num+'</i>份</span><span class="grade">　好评率<i>100%</i></span></p><p>¥<i>'+goodsArr[index].price+'</i></p></div>')
+							var $car = $('<span id="joinCar">+</span>');
+							$card.append($thisImg);
+							$card.append($content);
+							$card.append($car);
+							$item.append($card);
+						});
+						$wrap.append($item);
+					});
+				}	
+			});
+		</script>
+	</body>
+</html>

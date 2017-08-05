@@ -1,0 +1,376 @@
+[
+    {
+        "typeName": "热销",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "http://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "http://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "http://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "优惠",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "K Coffee",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "桶",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "美味汉堡/卷",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "吮指原味鸡",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "鸡翅/鸡排",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "小食/配餐",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "甜品/冰淇淋",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "缤纷饮料",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    },
+    {
+        "typeName": "赠书套餐",
+        "typeDes": "大家喜欢吃，才叫真好吃。",
+        "goods": [
+            {
+                "img_url": "https://fuss10.elemecdn.com/a/dd/b15e88f3ab2cec9e518609655d50ejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块香辣鸡翅",
+                "des": "香辣多汁，口感鲜美。",
+                "num": 323,
+                "price": 11
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/e/f6/f0d22421cc2efea895da79d407a49jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "二块新奥尔良烤翅",
+                "des": "鲜嫩多汁，具烧烤香和甜辣味",
+                "num": 189,
+                "price": 11.5
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/9/cf/428d40638dae22f97d1d8aebba5f2jpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "老北京鸡肉卷",
+                "des": "选用无骨鸡腿柳条、搭配传统甜面酱和新鲜爽脆黄瓜，酱香浓郁的老北京味。",
+                "num": 180,
+                "price": 15
+            },
+            {
+                "img_url": "https://fuss10.elemecdn.com/3/0b/929ccb586089e3ffda165966ca3dejpeg.jpeg?imageMogr/format/webp/thumbnail/!140x140r/gravity/Center/crop/140x140/",
+                "name": "香辣鸡腿堡",
+                "des": "整块无骨鸡腿肉, 浓郁汉堡酱，香脆鲜辣多汁。",
+                "num": 136,
+                "price": 17
+            }
+        ]
+    }
+]

@@ -6,20 +6,12 @@
           content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/mypublic.css">
     <link rel="stylesheet" href="css/style.css">
-    <script>
-			initSize()
-			function initSize () {
-				var screenW = document.documentElement.clientWidth || document.body.clientWidth
-				var oHtml = document.getElementsByTagName('html')[0]
-				var size = 100 * screenW / 640 + 'px'
-				oHtml.style.fontSize = size
-			}
-    </script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
     <title>修改地址</title>
 </head>
 <body>
 <header>
-    <a href="#" class="hd-left"> </a>
+    <a href="javascript:;" class="hd-left" onclick="returnPages()"> </a>
     <h1 class="hd-title">修改地址</h1>
 </header>
 <main class="page-newlocal">
@@ -84,7 +76,11 @@
     <button class="btn-confirm">确定</button>
 </footer>
 <script src="js/jquery.js"></script>
+<<<<<<< HEAD
 <script src="js/public.js"></script>
+=======
+<script src="js/c-public.js"></script>
+>>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 <script>
 /*	document.addEventListener('plusready', onPlusReady, false)
 	function onPlusReady () {

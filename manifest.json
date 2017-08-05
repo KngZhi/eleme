@@ -1,7 +1,12 @@
 {
 	"@platforms": ["android", "iPhone", "iPad"],
+<<<<<<< HEAD
 	"id": "H5DD71E11",/*应用的标识，创建应用时自动生成，勿手动修改*/
 	"name": "eleme",/*应用名称，程序桌面图标名称*/
+=======
+	"id": "H52680D08",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "elele",/*应用名称，程序桌面图标名称*/
+>>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 	"version": {
 		"name": "1.0.0",/*应用版本名称*/
 		"code": "83"
@@ -10,7 +15,11 @@
 	"icons": {
 		"72": "icon.png"
 	},
+<<<<<<< HEAD
 	"launch_path": "create-address.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+=======
+	"launch_path": "kfc.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+>>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -108,7 +117,11 @@
 			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
 			"waiting": true
 		},
+<<<<<<< HEAD
 		"runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+=======
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+>>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
 		"distribute": {
 			"apple": {
@@ -187,6 +200,7 @@
 					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
 					"xxhdpi": ""
 				}
+<<<<<<< HEAD
 			},"debug":true
 		}
 	},"fullscreen":true,
@@ -199,14 +213,62 @@
 					"css/mypublic.css",
 					"js/jquery.js",
 					"search-address.html"
+=======
+			}
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"data/shops.json",
+					"data/ele-type.json",
+					"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+					"js/bin/swiper-3.3.1.min.js",
+					"js/public.js",
+					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+					"css/bin/mobilereset.css",
+					"css/page.css",
+					"js/bin/zepto.min.js",
+					"js/bin/iscroll-min.js",
+					"css/bin/swiper-3.3.1.min.css",
+					"img/ic_rating_s.png"
 				],
 				"refer": [],
 				"priority": 0
 			},
+			"meishi.html": {
+				"resources": [
+					"data/shops.json",
+					"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+					"img/ic_rating_s.png",
+					"js/public.js",
+					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+					"css/bin/mobilereset.css",
+					"css/page.css",
+					"js/bin/zepto.min.js"
+>>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
+				],
+				"refer": [],
+				"priority": 0
+			},
+<<<<<<< HEAD
 			"search-address.html": {
 				"resources": [
 					"js/mui.min.js",
 					"create-address.html"
+=======
+			"kfc.html": {
+				"resources": [
+					"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+					"js/public.js",
+					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+					"css/bin/mobilereset.css",
+					"css/page.css",
+					"img/kfc_logo.jpeg",
+					"data/shop-goods.json",
+					"js/bin/zepto.min.js"
+>>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 				],
 				"refer": [],
 				"priority": 0
@@ -214,6 +276,7 @@
 		},
 		"idle": {
 			"resources": [
+<<<<<<< HEAD
 				"images/login.png",
 				"login.html",
 				"sass/_login.scss",
@@ -241,6 +304,19 @@
 				"css/mobilereset.css",
 				"images/local-shouhuo.png",
 				"sass/style.scss"
+=======
+				"js/bin/mui.js",
+				"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+				"fonts/mui.ttf",
+				"css/bin/font-awesome-4.7.0/css/font-awesome.css",
+				"css/bin/font-awesome-4.7.0/fonts/FontAwesome.otf",
+				"css/bin/mui.min.css",
+				"css/bin/mui.css",
+				"js/bin/mui.min.js",
+				"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.eot",
+				"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf",
+				"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.svg"
+>>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 			]
 		}
 	}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的</title>
+		<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script type="text/javascript" src="js/public.js"></script>
+	</head>
+	<body>
+		<div class="P_L_container">
+			<div class="P_L_header">
+				发现
+				<i class="fa fa-cog header-icon-right" onclick="window.location='setting.html'"></i>
+			</div>
+			<section class="L_my L_flex_content">
+				<div class="menber-div" onclick="window.location='user-info.html'">
+					<img src="img/header.png" class="head-img" />
+					<div class="menber-info">
+						<h3>立即登录</h3>
+						<p>登录后可享受更多特权</p>
+					</div>
+					<i class="fa fa-angle-right nav-right"></i>
+				</div>
+				<div class="menber-nav">
+					<div class="menu-div" onclick="window.location='my-money.html'">
+						<div class="fa-yuan">
+							<i class="fa fa-cny"></i>
+						</div>
+						<p>钱包</p>
+					</div>
+					<div class="menu-div">
+						<div class="fa-yuan sale-yuan">
+							<i class="fa fa-address-book-o"></i>
+						</div>
+						<p>优惠</p>
+					</div>
+					<div class="menu-div">
+						<div class="fa-yuan grade-yuan">
+							<i class="fa fa-database"></i>
+						</div>
+						<p>积分</p>
+					</div>
+				</div>
+				<ul class="my-ul">
+					<li onclick="window.location='address.html'"><i class="fa fa-location-arrow li-icon add-icon"></i>收货地址<i class="fa fa-angle-right nav-right"></i></li>
+					<li><i class="fa fa-heart li-icon show-icon"></i>我的收藏<i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+				
+				<ul class="my-ul">
+					<li><i class="fa fa-file-text li-icon grade-icon"></i>积分商店<i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+				
+				<ul class="my-ul">
+					<li><i class="fa fa-pagelines li-icon"></i>服务中心<i class="fa fa-angle-right nav-right"></i></li>
+					<li><i class="fa fa-thumbs-up li-icon"></i>欢迎评分<i class="fa fa-angle-right nav-right"></i></li>
+					<li><i class="fa fa-handshake-o li-icon"></i>加盟合作<i class="fa fa-angle-right nav-right"></i></li>
+				</ul>
+			</section>
+			<footer class="C_footer P_L_footer">
+				<div class="home" onclick="location.href='index.html'">
+					<i class="fa fa-home fa-rocket"></i>
+					<p>外卖</p>
+				</div>
+				<div class="shopcart" onclick="location.href='find.html'">
+					<i class="fa fa-podcast fa-fw"></i>
+					<p>发现</p>
+				</div>
+				<div class="myshow" onclick="location.href='order.html'">
+					<i class="fa fa-file-o fa-fw"></i>
+					<p>订单</p>
+				</div>
+				<div class="more on" onclick="location.href='my.html'">
+					<i class="fa fa-user-o fa-fw"></i>
+					<p>我的</p>
+			</footer>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript">
+			var Storage =JSON.parse(localStorage.getItem('user'));
+			if(Storage !=null){
+				var oInfo= $('.menber-info')
+				oInfo.find('h3').html(Storage.username).siblings('p').html(Storage.tel);
+				$('.menber-div').on('click',function(){window.location.href='user-info.html'})
+			}else{
+				$('.menber-div').on('click',function(){window.location.href='login.html'})
+			}
+		</script>
+		
+	</body>
+</html>

@@ -1,68 +1,203 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Title</title>
-</head>
-<body>
-    <header>
-        <div>
-            <i class="_icon-local"></i>
-            <span>牛田大食堂</span>
-            <aside>
-                <h2>27°</h2>
-                <p>阴天</p>
-                <img src="" alt="">
-            </aside>
-        </div>
-        <div><input type="text" placeholder="搜索商家、商品"></div>
-        <div>
-            <a href="#">棒冰</a>
-            <a href="#">香锅</a>
-            <a href="#">粉</a>
-            <a href="#">0元魔爪</a>
-            <a href="#">健身场</a>
-            <a href="#">棒冰</a>
-            <a href="#">老北京烤鸭</a>
-        </div>
-    </header>
-    <main>
-        <h2>推荐商家</h2>
-        <div class="card">
-            <div class="logo"></div>
-            <div class="content">
+<html>
 
-                <h3 class="">永和大王（地铁东城张）</h3>
-                <!-- 保，票等 icon 盒子-->
-                <div class="info-icon"></div>
-                <!-- 评分，销量 -->
-                <section>
-                    <span class="">4.6</span><span>月售<b></b>单</span>
-                </section>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="" content="" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/bin/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script type="text/javascript" src="js/public.js"></script>
+		<script type="text/javascript" src="js/bin/zepto.min.js" ></script>
+		<!--<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.js"></script>-->
+		<style type="text/css">
+			.swiper-container-horizontal>.swiper-pagination-bullets{bottom: -0.05rem;}
+			.swiper-pagination-bullet{ width: 0.25rem; height: 2px; display: inline-block;  border-radius: 0; }
+		</style>
+	</head>
+	<body>
+		<div class="E_index C_wrapper">
+			<div class="header">
+				<div class="index-MAORp">
+					<div class="locational">
+						<i class="_icon-local"></i>
+						<span>牛田大食堂　<i class="fa fa-map-marker" aria-hidden="true"></i></span>
+					</div>
+					<aside>
+						<h2>27°</h2>
+						<p>阴天</p>
+						<img src="" alt="">
+					</aside>
+				</div>
+				<div class="search"><input type="text" placeholder="搜索商家、商品"></div>
+				<div class="index-Hot">
+					<a href="#">棒冰</a>
+					<a href="#">香锅</a>
+					<a href="#">粉</a>
+					<a href="#">0元魔爪</a>
+					<a href="#">健身场</a>
+					<a href="#">棒冰</a>
+					<a href="#">老北京烤鸭</a>
+				</div>
+			</div>
 
-                <!--配送-->
-                <section>
-                    <span>¥20起送</span><span>配送费¥4</span>
-                </section>
+			<div class="main">
+				<div class="swiper-container banner">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swipe-item item1">
+							<!--<a href="javascript:">
+								<div class="container">
+									<img src="//fuss10.elemecdn.com/b/7e/d1890cf73ae6f2adb97caa39de7fcjpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/">
+								</div>
+								<span class="title">美食</span>
+							</a>-->
+						</div>
+						<div class="swiper-slide swipe-item item2"></div>
+				    </div>
+				    <div class="swiper-pagination"></div>
+				</div>    
+				<h3 class="index-title">推荐商家</h3>
+				<div class="wrap">
+					<!--<div class="card">
+						<div class="logo"><img src="//fuss10.elemecdn.com/0/da/66f918e98dad63ec74e812e3290d6png.png?imageMogr/format/webp/thumbnail/!120x120r/gravity/Center/crop/120x120/"/></div>
+						<div class="content">
+							<h3 class="shopname">永和大王（地铁东城张）</h3>
+							<!-- 保，票等 icon 盒子-->
+							<!--<div class="info-icon"></div>-->
+							<!-- 评分，销量 -->
+							<!--<section class="estimate">
+								<i class="star"></i><span class="grade">4.6</span><span class="sale">月售<b class="saleCount">444</b>单</span>
+							</section>-->
+							<!--配送-->
+							<!--<section class="carriage">
+								<p><span>¥20起送</span><i>|</i><span>配送费¥4</span></p>
+								<p><span class="distance">1.35km</span><i>|</i><span class="waitingTime">36分钟</span></p>
+							</section>-->
+							<!--活动框-->
+							<!--<section class="activity">
+								<p><i class="new">新</i><span>新用户下单立减少17.0元</span></p>
+								<p><i class="subtract">减</i><span>满40减8</span></p>
+							</section>-->
+						<!--</div>
+					</div>	-->
+				</div>
+			</div>
 
-                <!--活动框-->
-                <section>
-                    <div>
-                        <i></i>
-                        <span>新用户下单立减少17.0元</span>
-                        <span>5个活动</span>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <a href="#">外卖</a>
-        <a href="">发现</a>
-        <a href="">订单</a>
-        <a href="">我的</a>
-    </footer>
-</body>
+			<footer class="C_footer">
+				<div class="home on" onclick="location.href='index.html'">
+					<i class="fa fa-home fa-rocket"></i>
+					<p>外卖</p>
+				</div>
+				<div class="shopcart" onclick="location.href='find.html'">
+					<i class="fa fa-podcast fa-fw"></i>
+					<p>发现</p>
+				</div>
+				<div class="myshow" onclick="location.href='order.html'">
+					<i class="fa fa-file-o fa-fw"></i>
+					<p>订单</p>
+				</div>
+				<div class="more" onclick="location.href='my.html'">
+					<i class="fa fa-user-o fa-fw"></i>
+					<p>我的</p>
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/bin/swiper-3.3.1.min.js"></script>
+        <script type="text/javascript">
+       		$.ajax({
+       			type:"get",
+       			url:"./data/ele-type.json",
+       			async:true,
+       			dataType:'json',
+       			success:function(data){
+       				console.log(typeof data)
+       				var $swiperWrapper = $('.swiper-wrapper')
+       				var $swiperItem1 = $('.item1');
+       				var $swiperItem2 = $('.item2');
+       				$.each(data, function(index) {
+       					if(index<8){
+       						list($swiperItem1,index)
+       					}else{
+       						list($swiperItem2,index)
+       					}
+       					$swiperWrapper.append($swiperItem1);
+       					$swiperWrapper.append($swiperItem2);
+       					function list(ele,index){
+       						var $thisBox = $('<a href="meishi.html"></a>');
+	       					var $imgBox = $('<div class="container"></div>');
+	       					var $thisImg = $('<img src="'+data[index].img_url+'"/>');
+	       					var $title = $('<span class="title">'+data[index].name+'</span>');
+	       					$thisImg.on('touchstart',function(){
+       							alert(1)
+       						})
+	       					$imgBox.append($thisImg);
+	       					$thisBox.append($imgBox);
+	       					$thisBox.append($title);
+	       					ele.append($thisBox);
+	       					$swiperWrapper.append(ele)
+       					}
+       				});
+       			}
+       		});
+       		
+       		
+       		$.ajax({
+       			type:"get",
+       			url:"./data/shops.json",
+       			async:true,
+       			dataType:'json',
+       			success:function(data){	
+//     				var data =JSON.parse(data+"")
+       				console.log(typeof data)
+       				var $wrap = $('.wrap')
+       				var card = '';
+       				$.each(data, function(index) {
+//     					console.log(data[index].img_url);
+						var kfcUrl='window.location="kfc.html"';
+       					 card += '<div class="card" onclick='+kfcUrl+'>'
+									+'<div class="logo"><img src="'+data[index].img_url+'"/></div>'
+									+'<div class="content">'
+										+'<h3 class="shopname">'+data[index].name+'</h3>'
+										+'<div class="info-icon"></div>'
+										+'<section class="estimate">'
+											+'<i class="star"></i><span class="grade">'+data[index].grade+'</span><span class="sale">月售<b class="saleCount">'+data[index].num+'</b>单</span>'
+										+'</section>'
+										+'<section class="carriage">'
+										+'	<p><span>¥<i>'+data[index].start_pri+'</i>起送</span><i class="line">|</i><span>配送费¥<i>'+data[index].packing_fee+'</i></span></p>'
+											+'<p><span class="distance">1.35km</span><i class="line">|</i><span class="waitingTime">36分钟</span></p>'
+										+'</section>'
+										+'<section class="activity">'
+										+'	<p><i class="new">新</i><span>新用户下单立减少17.0元</span></p>'
+											+'<p><i class="subtract">减</i><span>满40减8</span></p>'
+										+'</section>'
+									+'</div>'
+								+'</div>'
+       				});
+       				 $wrap.append(card);
+       			}
+       		});
+	
+       		
+//Swiper初始化
+initSwiper()
+function initSwiper() {
+	var swiper = new Swiper(".swiper-container", {
+		loop:'true',
+		pagination: ".swiper-pagination",
+		paginationClickable: true
+//		paginationBulletRender:function(index,className){
+//			return '<span class="'+className+'">'+(index+1)+'</span>';
+//		},
+	});
+}
+       		
+       		
+       	
+       	
+       	
+       </script>
+	</body>
 </html>

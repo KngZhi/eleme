@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="" content="" />
+		<title>美食</title>
+		<link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css" />
+		<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script type="text/javascript" src="js/public.js"></script>
+		<script type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="E_meishi C_wrapper">
+			<!--<div class="C_header">
+				<a class="back" onclick="goBack()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+				美食
+				<a class="search" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+			</div>-->
+			<div class="nav">
+				<a href="#" class="active">全部</a>
+				<a href="#">简餐便当</a>
+				<a href="#">面食粥点</a>
+				<a href="#">汉堡披萨</a>
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+			
+			
+			<div class="main">
+				<ul class="select_Bar"><!--select_option-->
+					<li class="active1">综合排序</li>
+					<li>好评优先</li>
+					<li>距离最近</li>
+					<li>筛选<i></i></li>
+				</ul>
+				
+				<div class="wrap">
+					<!--<div class="card">
+						<div class="logo"><img src="//fuss10.elemecdn.com/0/da/66f918e98dad63ec74e812e3290d6png.png?imageMogr/format/webp/thumbnail/!120x120r/gravity/Center/crop/120x120/"/></div>
+						<div class="content">
+							<h3 class="shopname">永和大王（地铁东城张）</h3>-->
+							<!-- 保，票等 icon 盒子-->
+							<!--<div class="info-icon"></div>-->
+							<!-- 评分，销量 -->
+							<!--<section class="estimate">
+								<i class="star"></i><span class="grade">4.6</span><span class="sale">月售<b class="saleCount">444</b>单</span>
+							</section>-->
+							<!--配送-->
+							<!--<section class="carriage">
+								<p><span>¥20起送</span><i>|</i><span>配送费¥4</span></p>
+								<p><span class="distance">1.35km</span><i>|</i><span class="waitingTime">36分钟</span></p>
+							</section>-->
+							<!--活动框-->
+							<!--<section class="activity">
+								<p><i class="new">新</i><span>新用户下单立减少17.0元</span></p>
+								<p><i class="subtract">减</i><span>满40减8</span></p>
+							</section>
+						</div>
+					</div>-->
+					
+					
+					
+					
+					
+				</div>
+				
+			</div>
+
+			<footer class="C_footer">
+				<div class="home on" onclick="location.href='index.html'">
+					<i class="fa fa-home fa-rocket"></i>
+					<p>外卖</p>
+				</div>
+				<div class="shopcart" onclick="location.href='find.html'">
+					<i class="fa fa-podcast fa-fw"></i>
+					<p>发现</p>
+				</div>
+				<div class="myshow" onclick="location.href='order.html'">
+					<i class="fa fa-file-o fa-fw"></i>
+					<p>订单</p>
+				</div>
+				<div class="more" onclick="location.href='my.html'">
+					<i class="fa fa-user-o fa-fw"></i>
+					<p>我的</p>
+			</footer>
+		</div>
+		
+		<script type="text/javascript" src="js/bin/zepto.min.js" ></script>
+		<script type="text/javascript">
+			
+			$.ajax({
+       			type:"get",
+       			url:"./data/shops.json",
+       			async:true,
+       			dataType:'json',
+       			success:function(data){
+       				console.log(typeof data)
+//     				var data =JSON.parse(data)
+       				var $wrap = $('.wrap')
+       				var card = '';
+       				$.each(data, function(index) {
+//     					console.log(data[index].img_url);
+						 var kfcUrl='window.location="kfc.html"';
+       					 card += '<div class="card" onclick='+kfcUrl+'>'
+									+'<div class="logo"><img src="'+data[index].img_url+'"/></div>'
+									+'<div class="content">'
+										+'<h3 class="shopname">'+data[index].name+'</h3>'
+										+'<div class="info-icon"></div>'
+										+'<section class="estimate">'
+											+'<i class="star"></i><span class="grade">'+data[index].grade+'</span><span class="sale">月售<b class="saleCount">'+data[index].num+'</b>单</span>'
+										+'</section>'
+										+'<section class="carriage">'
+										+'	<p><span>¥<i>'+data[index].start_pri+'</i>起送</span><i class="line">|</i><span>配送费¥<i>'+data[index].packing_fee+'</i></span></p>'
+											+'<p><span class="distance">1.35km</span><i class="line">|</i><span class="waitingTime">36分钟</span></p>'
+										+'</section>'
+										+'<section class="activity">'
+										+'	<p><i class="new">新</i><span>新用户下单立减少17.0元</span></p>'
+											+'<p><i class="subtract">减</i><span>满40减8</span></p>'
+										+'</section>'
+									+'</div>'
+								+'</div>'
+       				});
+       				 $wrap.append(card);
+       			}
+       		});
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>

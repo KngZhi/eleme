@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 /**
  * Created by KZhi on 04/08/2017.
  */
 // 获取所有标签的值并以 id 和 val 或 txt 作为键值对
+
 function $tagsVal (tag, callback) {
 	var res = {}
 	$.each($(tag), function (index, val) {
@@ -44,26 +44,3 @@ function autoFillAdd (time) {
 		$('#address').val(specAdd.address)
 	}
 }
-
-// 给所有的 hd-left 添加回退的标签
-(function () {
-	var backBtn = document.getElementsByClassName('hd-left')[0]
-	backBtn.onclick = function () {
-		window.history.back()
-	}
-})()
-=======
-//根字号初始化
-initSize();
-function initSize(){
-	var  screenW = document.documentElement.clientWidth || document.body.clientWidth;
-	var oHtml = document.getElementsByTagName('html')[0]
-	var size = 100 * screenW / 640 + 'px'
-	oHtml.style.fontSize = size;
-}
-
-//点击返回页面事件
-function returnPages(){
-	window.history.go(-1);
-}
->>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
