@@ -203,7 +203,7 @@
 			function onPlusReady(){
 				// 使用高德地图地位模块获取位置信息
 				plus.geolocation.getCurrentPosition(function(p){
-					$('#addressGeo').html(p.address.poiName+'  <i class="fa fa-map-marker" aria-hidden="true">');
+					$('#addressGeo').html('<i class="fa fa-map-marker" aria-hidden="true"> '+p.address.poiName);
 //					getWeather(p.coords.latitude,p.coords.longitude );
 				}, function(e){
 					alert('Geolocation error: ' + e.message);

@@ -1,186 +1,202 @@
 {
-	"index.html": {
-		"resources": [
-			"data/shops.json",
-			"data/ele-type.json",
-			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
-			"img/ic_rating_s.png",
-			"js/bin/swiper-3.3.1.min.js",
-			"js/public.js",
-			"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
-			"css/bin/mobilereset.css",
-			"css/page.css",
-			"js/bin/zepto.min.js",
-			"css/bin/swiper-3.3.1.min.css",
-			"find.html",
-			"order.html",
-			"my.html",
-			"meishi.html"
-		],
-		"refer": [
-			"find.html",
-			"order.html",
-			"my.html",
-			"meishi.html"
-		]
-	},
-	"find.html": {
-		"resources": [
-			"index.html",
-			"img/find-img1.png",
-			"order.html",
-			"img/find-bar.png",
-			"img/find-img3.png",
-			"img/find-img4.png",
-			"img/find-img2.png",
-			"img/find-food1.png",
-			"my.html"
-		],
-		"refer": [
-			"index.html",
-			"order.html",
-			"my.html"
-		]
-	},
-	"my.html": {
-		"resources": [
-			"img/header.png",
-			"js/jquery.js",
-			"order.html",
-			"user-info.html",
-			"address.html",
-			"setting.html"
-		],
-		"refer": [
-			"order.html",
-			"user-info.html",
-			"address.html",
-			"setting.html"
-		]
-	},
-	"order.html": {
-		"resources": [
-			"img/order-img1.png",
-			"find.html",
-			"my.html",
-			"evaluate.html"
-		],
-		"refer": [
-			"find.html",
-			"my.html",
-			"evaluate.html"
-		]
-	},
-	"user-info.html": {
-		"resources": [
-			"my.html",
-			"img/user-info-header.png"
-		],
-		"refer": [
-			"my.html"
-		]
-	},
-	"meishi.html": {
-		"resources": [
-			"data/shops.json",
-			"kfc.html"
-		],
-		"refer": [
-			"kfc.html"
-		]
-	},
-	"kfc.html": {
-		"resources": [
-			"data/shop-goods.json",
-			"img/kfc_logo.jpeg",
-			"js/bin/iscroll-min.js"
-		]
-	},
-	"evaluate.html": {
-		"resources": [
-			"js/pages/evalutae.js",
-			"js/jquery.js",
-			"order.html"
-		],
-		"refer": [
-			"order.html"
-		]
-	},
-	"address.html": {
-		"resources": [
-			"images/icon-pen.png",
-			"css/style.css",
-			"images/icon-plus.png",
-			"images/back-arr.png",
-			"js/c-public.js",
-			"css/mypublic.css",
-			"js/public.js",
-			"js/jquery.js",
-			"create-address.html",
-			"my.html",
-			"alter-address.html"
-		],
-		"refer": [
-			"create-address.html",
-			"my.html",
-			"alter-address.html"
-		]
-	},
-	"create-address.html": {
-		"resources": [
-			"js/public.js",
-			"css/style.css",
-			"images/back-arr.png",
-			"js/c-public.js",
-			"css/mypublic.css",
-			"js/jquery.js",
-			"address.html",
-			"search-address.html"
-		],
-		"refer": [
-			"address.html",
-			"search-address.html"
-		]
-	},
-	"search-address.html": {
-		"resources": [
-			"js/mui.min.js",
-			"js/public.js",
-			"css/style.css",
-			"images/back-arr.png",
-			"js/c-public.js",
-			"js/jquery.js",
-			"create-address.html"
-		],
-		"refer": [
-			"create-address.html"
-		]
-	},
-	"setting.html": {
-		"resources": [
-			"login.html"
-		],
-		"refer": [
-			"login.html"
-		]
-	},
-	"login.html": {
-		"resources": [
-			"index.html",
-			"css/style.css",
-			"images/back-arr.png",
-			"css/mypublic.css"
-		],
-		"refer": [
-			"index.html"
-		]
-	},
-	"alter-address.html": {
-		"resources": [
-			"address.html"
-		],
-		"refer": [
-			"address.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "data/shops.json",
+      "data/ele-type.json",
+      "css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+      "img/ic_rating_s.png",
+      "js/bin/swiper-3.3.1.min.js",
+      "js/public.js",
+      "css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+      "css/bin/mobilereset.css",
+      "css/page.css",
+      "js/bin/zepto.min.js",
+      "css/bin/swiper-3.3.1.min.css",
+      "find.html",
+      "order.html",
+      "my.html",
+      "meishi.html"
+    ],
+    "refer": [
+      "find.html",
+      "order.html",
+      "my.html",
+      "meishi.html"
+    ]
+  },
+  "find.html": {
+    "resources": [
+      "index.html",
+      "img/find-img1.png",
+      "order.html",
+      "img/find-bar.png",
+      "img/find-img3.png",
+      "img/find-img4.png",
+      "img/find-img2.png",
+      "img/find-food1.png",
+      "my.html"
+    ],
+    "refer": [
+      "index.html",
+      "order.html",
+      "my.html"
+    ]
+  },
+  "my.html": {
+    "resources": [
+      "img/header.png",
+      "js/jquery.js",
+      "order.html",
+      "user-info.html",
+      "address.html",
+      "setting.html",
+      "js/public.js",
+      "css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+      "css/bin/mobilereset.css",
+      "css/page.css",
+      "css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+      "index.html"
+    ],
+    "refer": [
+      "order.html",
+      "user-info.html",
+      "address.html",
+      "setting.html"
+    ]
+  },
+  "order.html": {
+    "resources": [
+      "img/order-img1.png",
+      "find.html",
+      "my.html",
+      "evaluate.html"
+    ],
+    "refer": [
+      "find.html",
+      "my.html",
+      "evaluate.html"
+    ]
+  },
+  "user-info.html": {
+    "resources": [
+      "my.html",
+      "img/user-info-header.png",
+      "css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff",
+      "js/public.js",
+      "css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+      "css/bin/mobilereset.css",
+      "css/page.css",
+      "js/jquery.js"
+    ],
+    "refer": [
+      "my.html"
+    ]
+  },
+  "meishi.html": {
+    "resources": [
+      "data/shops.json",
+      "kfc.html",
+      "my.html"
+    ],
+    "refer": [
+      "kfc.html"
+    ]
+  },
+  "kfc.html": {
+    "resources": [
+      "data/shop-goods.json",
+      "img/kfc_logo.jpeg",
+      "js/bin/iscroll-min.js"
+    ],
+    "refer": []
+  },
+  "evaluate.html": {
+    "resources": [
+      "js/pages/evalutae.js",
+      "js/jquery.js",
+      "order.html"
+    ],
+    "refer": [
+      "order.html"
+    ]
+  },
+  "address.html": {
+    "resources": [
+      "images/icon-pen.png",
+      "css/style.css",
+      "images/icon-plus.png",
+      "images/back-arr.png",
+      "js/c-public.js",
+      "css/mypublic.css",
+      "js/public.js",
+      "js/jquery.js",
+      "create-address.html",
+      "my.html",
+      "alter-address.html"
+    ],
+    "refer": [
+      "create-address.html",
+      "my.html",
+      "alter-address.html"
+    ]
+  },
+  "create-address.html": {
+    "resources": [
+      "js/public.js",
+      "css/style.css",
+      "images/back-arr.png",
+      "js/c-public.js",
+      "css/mypublic.css",
+      "js/jquery.js",
+      "address.html",
+      "search-address.html"
+    ],
+    "refer": [
+      "address.html",
+      "search-address.html"
+    ]
+  },
+  "search-address.html": {
+    "resources": [
+      "js/mui.min.js",
+      "js/public.js",
+      "css/style.css",
+      "images/back-arr.png",
+      "js/c-public.js",
+      "js/jquery.js",
+      "create-address.html"
+    ],
+    "refer": [
+      "create-address.html"
+    ]
+  },
+  "setting.html": {
+    "resources": [
+      "login.html",
+      "my.html"
+    ],
+    "refer": [
+      "login.html",
+      "my.html"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "index.html",
+      "css/style.css",
+      "images/back-arr.png",
+      "css/mypublic.css"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "alter-address.html": {
+    "resources": [
+      "address.html"
+    ],
+    "refer": [
+      "address.html"
+    ]
+  }
 }

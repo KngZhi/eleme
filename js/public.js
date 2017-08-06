@@ -10,6 +10,5 @@ function initSize(){
 
 //点击返回页面事件
 function returnPages(){
-	console.log(222);
 	window.history.back();  
 }

@@ -22,10 +22,10 @@
 				</ul>
 				<p class="ul-title">账号绑定</p>
 				<ul class="common-ul">
-					<li>手机<span class="tel">158****2312</span><i class="fa fa-angle-right nav-right"></i></li>
-					<li>微信<span class="no-value">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
-					<li>QQ<span class="no-value">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
-					<li>微博<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li><i class="fa fa-mobile " aria-hidden="true"></i>手机<span class="tel">158****2312</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li onclick="getServices('weixin')"><i class="fa fa-weixin" aria-hidden="true"></i>微信<span class="no-value weixin">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li onclick="getServices('qq')"><i class="fa fa-qq" aria-hidden="true"></i>QQ<span class="no-value qq">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li onclick="getServices('sinaweibo')"><i class="fa fa-weibo" aria-hidden="true"></i>微博<span class="no-value sinaweibo">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
 					<li>淘宝<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
 				</ul>
 				<p class="ul-title">安全设置</p>
@@ -39,21 +39,80 @@
 		
 		<script type="text/javascript" src="js/jquery.js" ></script>
 		<script type="text/javascript">
+			var Storage = JSON.parse(localStorage.getItem('account'));
+			var src =localStorage.getItem('info_header');
+			var username = $('.username');
+			var tel = $('.tel')
+			username.html(Storage.username)
+			tel.html(Storage.tel);
+			if(src != null){
+				 $('.info_header').attr('src',src);	
+			}
+			var wxName = localStorage.getItem('weixin');
+            var qqName = localStorage.getItem('qq');
+            var wbName = localStorage.getItem('sinaweibo');
+            console.log(wxName)
+            console.log(qqName)
+            console.log(wbName)
+            if(wxName != null){
+            	$('.weixin').html(wxName);
+            }
+            
+            if(qqName != null){
+            	$('.qq').html(qqName);
+            }
+            
+            if(wbName != null){
+            	$('.weibo').html(wbName);
+            }
+			
+            // 登录授权操作
+			var auths={};
 			document.addEventListener('plusready',plusReady,false);
 			function plusReady(){
-				
-				
+				plus.oauth.getServices(function(services){
+					for(var i in services){
+						var service=services[i];
+						auths[service.id]=service;
+					}
+				},function(e){
+					alert("获取登录认证失败："+e.message);
+				});
+			}
+            
+            
+			function getServices(type){
+				if(localStorage.getItem(type) != null){
+					
+				}else{
+					login(type)
+				}
 				
 			}
-			
-			var src =localStorage.getItem('info_header');
-			var Storage = JSON.parse(localStorage.getItem('user'));
-			if(src != null){
-				 $('.info_header').attr('src',src);
-				var username = $('.username');
-				var tel = $('.tel')
-				username.html(Storage.username)
-				tel.html(Storage.tel);	
+			// 登录认证
+			function login(id){
+				var auth=auths[id];
+				console.log(auth);
+				if(auth){
+					var w=null;
+					if(plus.os.name=="Android"){
+						w=plus.nativeUI.showWaiting();
+					}
+					document.addEventListener("pause",function(){
+						setTimeout(function(){
+							w&&w.close();w=null;
+						},2000);
+					}, false );
+					auth.login(function(){
+						w&&w.close();w=null;
+						userinfo(auth,id);
+					},function(e){
+						w&&w.close();w=null;
+						plus.nativeUI.alert("绑定失败",null,"登录失败["+e.code+"]："+e.message);
+					});
+				}else{
+					plus.nativeUI.alert("无效的登录认证通道！",null,"登录");
+				}
 			}
 			
               // 从相册中选择图片头像
@@ -66,57 +125,34 @@
 			    	
 			    	}, {filter:'image'});
 			}	
+
+			// 获取用户信息
+			function userinfo(a,id){
+				a.getUserInfo(function(){
+					var nickname=a.userInfo.nickname||a.userInfo.name||a.userInfo.miliaoNick;
+					plus.nativeUI.alert("欢迎“"+nickname+"”登录！");
+					localStorage.setItem(id,nickname)
+					$('.'+id+'').html(nickname)
+				},function(e){
+					plus.nativeUI.alert("获取用户信息失败！",null,"登录");
+				});
+			}
 			
 			
-			
-			
-			
-			
-//			function showImg(url){
-//			// 兼容以"file:"开头的情况
-//			if(0!=url.indexOf('file://')){
-//				url='file://'+url;
-//				console.log(url);
-//				
-//			}
-//			var _body_ = document.body;
-//			var _div_ = document.createElement('div');
-//			_div_.style.top='0px';
-//			_div_.style.left='0px';
-//			_div_.style.height='30%';
-//			_div_.style.width='30%';
-//			_div_.style.zIndex='99999';
-//			_div_.style.position='fixed';
-//			_div_.style.background='#ffffff';
-//			_div_.id='imgShow';
-//			_div_.onclick=closeImg;
-//			var _img_=document.createElement('img');
-//			_img_.src=url;
-//			_img_.style.width='100%';
-//			_body_.appendChild(_div_);
-//			_div_.appendChild(_img_);
-//		}
-//			
-//		function closeImg(){
-//			var trnode=document.getElementById('imgShow');
-//			trnode&&trnode.parentNode.removeChild(trnode);
-//		}	
-//		function createItem(path){
-//			var li = document.createElement('li');
-//			li.className = 'ditem';
-//			li.innerHTML = '<span class="iplay"><font class="aname"></font><br/><font class="ainf"></font></span>';
-//			li.setAttribute('onclick', 'displayMedia(this);' );
-//			list.insertBefore(li, first.nextSibling);
-//			var i = path.lastIndexOf('/');
-//			if(i<0){
-//				i = path.lastIndexOf('\\');
-//			}
-//			li.querySelector('.aname').innerText = path.substr(i+1);
-//			li.querySelector('.ainf').innerText = path;
-//			li.path = path;
-//			// 设置空项不可见
-//			first.style.display = 'none';
-//		}	
+			function logoutOne(){
+				for(var i in auths){
+					console.log(auths[i]);
+					logout(auths[i]);
+				}
+			}
+			//注销登录
+			function logout(auth){
+				auth.logout(function(){
+					plus.nativeUI.alert("解除绑定\""+auth.description+"\"成功");
+				},function(e){
+					plus.nativeUI.alert("注销\""+auth.description+"\"失败："+e.message);
+				});
+			}
 			
 		</script>
 		

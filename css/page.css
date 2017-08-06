@@ -147,8 +147,8 @@ html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino San
 .L_my .menber-div h3{font: 0.3rem/0.76rem '';}
 .L_my .menber-div .nav-right{font-size: 0.28rem;color: #FFFFFF;position: absolute;top: .7rem;right: .3rem;}
 .L_my .menber-nav{display: -webkit-box;-webkit-box-orient: horizontal;background-color: #FFFFFF;border-bottom: 1px solid #EDEDED;}
-.L_my .menu-div{-webkit-box-flex: 1;height: 1.36rem;border-right: 1px solid #ededed;text-align: center;}
-.L_my .fa-yuan{height: .5rem;width: .5rem;text-align: center;line-height: .5rem;font-size: .24rem;border-radius: 50%;margin: 0 auto;margin-top: .26rem;background-image: -webkit-linear-gradient(left,#ffc900,#ffa304);background-image: linear-gradient(90deg,#ffc900,#ffa304);color: #FFFFFF;}
+.L_my .menu-div{-webkit-box-flex: 1;padding-top: 0.26rem;box-sizing: border-box;  height: 1.36rem;border-right: 1px solid #ededed;text-align: center;}
+.L_my .fa-yuan{height: .5rem;width: .5rem;text-align: center;line-height: .5rem;font-size: .24rem;border-radius: 50%;margin: 0 auto;background-image: -webkit-linear-gradient(left,#ffc900,#ffa304);background-image: linear-gradient(90deg,#ffc900,#ffa304);color: #FFFFFF;}
 .L_my .sale-yuan{background-image: -webkit-linear-gradient(left,#fe6a00,#ff3100);background-image: linear-gradient(90deg,#fe6a00,#ff3100);}
 .L_my .grade-yuan{background-image: -webkit-linear-gradient(left,#79e17e,#05be45);background-image: linear-gradient(90deg,#79e17e,#05be45);}
 .L_my .menu-div p{font: .2rem/.44rem '';}
