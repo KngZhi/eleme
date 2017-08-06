@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,  user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--<link rel="stylesheet" href="../css/mobilereset.css">-->
+    <link rel="stylesheet" href="css/mypublic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <title>注册</title>
+    <style type="text/css">
+    	.register{}
+    	.register .account-wrap{width: 100%;border-top: 1px solid #EEEEEE;border-bottom: 1px solid #eeeeee;background: #ffffff;padding-left: .3rem;}
+    	.register .account-wrap input{display: inline-block;font: 400 .3rem/.42rem '';width: 100%;padding-top: .21rem; padding-bottom: .24rem;border-bottom: 1px solid #EEEEEE;}
+    	.register .account-wrap input:last-of-type{border-bottom: none;}
+    	.register section{margin: .4rem .3rem;}
+    	.register .btn-confirm{width:100%;font: 400 0.3rem/0.95rem "microsoft yahei"; background: #56d175;color: #ffffff;border-radius: .1rem;}
+    </style>
+</head>
+<body>
+    <header class="space-bt-row">
+        <a href="javascript:;" class="hd-left" onclick="returnPages()">
+        </a>
+        <h1 class="hd-title">注册</h1>
+    </header>
+    <main class="register">
+        <div class="account-wrap">
+            <input type="text" id="username" placeholder="请输入用户名">
+            <input type="password" id="password" placeholder="请输入密码">
+            <input type="password" id="repassword" placeholder="重新输入密码">
+        </div>
+        <section>
+            <button class="btn-confirm" onclick="_register()">同意协议并注册</button>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="text/javascript">
+    	function _register(){
+			var name = $('#username').val();
+			var psw = $("#password").val();
+			var repsw = $("#repassword").val();
+			if(name!=""){
+		  	  if(psw!=""){
+		  	  	 if(repsw != ''){
+		  	  	 	if(psw==repsw){
+			  	  	 	var user = getUser(name,psw)
+			  	  	 	registerData(user)
+			  	  	 }else{
+			  	  	   alert("两次密码不一致")	
+			  	  	 }
+		  	  	 }else{
+		  	  	 	alert("请再次输入密码")
+		  	  	 }
+		  	  }else{
+		  	  	alert("请输入密码")	
+		  	  }
+		  }else{
+		  	alert("请设置用户名")
+		  }
+		}
+	
+function getUser(userID,password){
+	var user = {
+		userID:userID,
+		password:password
+	}
+	return user
+}
+
+function registerData(user){
+	console.log(user.userID+"，"+user.password)
+	$.ajax({
+		type:"post",
+		url:"http://datainfo.duapp.com/shopdata/userinfo.php", 
+		data:{status:"register",userID:user.userID,password:user.password},
+		success:function(data){
+			console.log(data)
+			if(data==1){
+				alert("注册成功")
+				window.location.href='login.html';
+			}else{
+				alert("用户名已注册");
+			}
+		}
+	});
+	
+}
+
+    	
+   </script>
+</body>
+</html>
