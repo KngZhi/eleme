@@ -29,6 +29,7 @@ html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino San
 .C_wrapper .main{flex: 1;position: relative;width: 100%;font: .3rem/.5rem "microsoft yahei";background: #fcfcfc;}
 .C_wrapper .wrap{box-sizing:border-box;padding-left:0.20rem;}
 .C_wrapper .wrap .card{border-top:1px solid #eeeeee;display: flex;padding-top:0.3rem ;}
+.C_wrapper .wrap .card:last-of-type{padding-bottom: 1rem;}
 .C_wrapper .wrap .card .logo{width:21%;margin-right:0.2rem ;}
 .C_wrapper .wrap .card img{width:100%;}
 .C_wrapper .wrap .card .content{flex: 1;}
@@ -97,20 +98,9 @@ html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino San
 
 /*kng css*/
 #container {height: 6.04rem; flex: 1}
-.E_kfc .main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-#aside {
-    width: 28%;
-    height: 8.04rem;
-}
-
-.E_kfc .main .aside {
-   width: 100%;
-}
+.E_kfc .main {display: flex;flex-wrap: wrapflex-direction: column;}
+#aside {width: 28%;height: 8.04rem;}
+.E_kfc .main .aside { width: 100%;}
 
 /*.E_kfc .main .aside{width:28%;float: left;}*/
 .E_kfc .main .aside li{border-bottom:2px solid #ededed;display: flex;align-items: center; background: #f8f8f8; }
