@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-	<name>eleme</name>
-=======
 	<name>elele</name>
->>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 	<comment>Create By HBuilder</comment>
 	<projects>
 	</projects>
@@ -26,11 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-			<id>1501674234834</id>
-=======
 			<id>1501585906645</id>
->>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -48,11 +40,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1501684938917</id>
-=======
 			<id>1501907960057</id>
->>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -61,9 +49,6 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1501684938917</id>
-=======
 			<id>1501907960100</id>
 			<name></name>
 			<type>26</type>
@@ -91,8 +76,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1501924964927</id>
->>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
+			<id>1501995330825</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
