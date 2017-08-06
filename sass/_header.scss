@@ -1,0 +1,20 @@
+header {
+  height: .9rem;
+  color: #fff;
+  background: #0298ff;
+  position: relative;
+}
+$hdShape: .90rem, .90rem;
+.hd-left {
+  position: absolute;
+  @include shape($hdShape...);
+  background: url("../images/back-arr.png") center no-repeat;
+  background-size: .22rem;
+}
+
+.hd-title {
+  text-align: center;
+  //@include font($hdFont...);
+  font: 700 .36rem/.9rem 'microsoft yahei';
+}
+

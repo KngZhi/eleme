@@ -1,0 +1,53 @@
+.space-bt-row {
+  margin-bottom: .3rem;
+}
+
+%btn {
+  text-align: center;
+}
+
+.btn-confirm {
+  @extend %btn;
+  background: #56d175;
+  color: #ffffff;
+  border-radius: .1rem;
+}
+
+.btn-option {
+  @extend %btn;
+  width: 1.36rem;
+  font: 400 .26rem/.56rem '';
+  color: #666666;
+  text-align: center;
+  border:1px solid #EFEFEF;
+  border-radius: .06rem;
+  background: #ffffff;
+}
+
+.btn-option-on {
+  border: 1px solid #1492FF;
+  color: #1492FF;
+}
+%icon {
+  display: inline-block;
+}
+.icon-pen {
+  @extend %icon;
+  background: url(../images/icon-pen.png) no-repeat center;
+}
+
+.icon-plus {
+  @extend %icon;
+  background: url(../images/icon-plus.png) no-repeat left center;
+  background-size: .4rem;
+  width: .4rem;
+  margin-right: .17rem;
+}
+$gtSizeCol: .26rem, #c7c7c7;
+.icon-gt {
+  @extend %icon;
+  @include fsizeCol($gtSizeCol...);
+  font-weight: 700;
+  float: right;
+  margin-right: .23rem;
+}
