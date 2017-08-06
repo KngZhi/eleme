@@ -254,6 +254,7 @@ html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino San
 
 .common-ul{background: #FFFFFF;margin-top: .25rem;padding-left: .25rem;}
 .common-ul li{font: .26rem/.72rem '';color: #000000;height: .72rem;border-bottom:1px solid #f3f3f3 ;padding-right: .6rem;position: relative;}
+.common-ul li i{font-size: .28rem;color: #2c99ff;margin-right: .2rem;}
 .common-ul li span{float: right;color: #c6c6c6;font-size: .24rem;}
 .common-ul li span.no-value{color: #2c99ff;}
 .common-ul li .nav-right{position: absolute;font-size:.26rem;line-height:.72rem;top: 0;right: 0.25rem;color:#c6c6c6}

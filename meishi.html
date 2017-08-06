@@ -31,9 +31,9 @@
 			
 			<div class="main">
 				<ul class="select_Bar"><!--select_option-->
-					<li class="active1">综合排序</li>
-					<li>好评优先</li>
-					<li>距离最近</li>
+					<li class="active1" onclick="sort('zhonghe')">综合排序</li>
+					<li onclick="sort('haoping')">好评优先</li>
+					<li onclick="sort('juli')">距离最近</li>
 					<li>筛选<i></i></li>
 				</ul>
 				
@@ -91,18 +91,41 @@
 		<script type="text/javascript" src="js/bin/zepto.min.js" ></script>
 		<script type="text/javascript">
 			
+			function sort(type){
+				$.ajax({
+	       			type:"get",
+	       			url:"./data/shops.json",
+	       			async:true,
+	       			dataType:'json',
+	       			success:function(data){
+	       				data=dataSort(data,type);
+	   				}
+       			});
+			}
+			
+			function dataSort(data,type){
+				if(type=='zhonghe'){
+					return data;
+				}
+				if(type=='haoping'){
+					var
+					return data;
+				}
+				if(type=='juli'){
+					return data;
+				}
+			}
+			
 			$.ajax({
        			type:"get",
        			url:"./data/shops.json",
        			async:true,
        			dataType:'json',
        			success:function(data){
-//     				console.log(typeof data)
-//     				var data =JSON.parse(data)
        				var $wrap = $('.wrap')
        				var card = '';
+       				data=sort(data);
        				$.each(data, function(index) {
-//     					console.log(data[index].img_url);
 						 var kfcUrl='window.location="kfc.html"';
        					 card += '<div class="card" onclick='+kfcUrl+'>'
 									+'<div class="logo"><img src="'+data[index].img_url+'"/></div>'
@@ -125,11 +148,9 @@
        				});
        				 $wrap.append(card);
        			}
-       		});
-			
-			
-			
-			
+       	});
+       	
+       	
 		</script>
 	</body>
 

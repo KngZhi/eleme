@@ -22,11 +22,11 @@
 				</ul>
 				<p class="ul-title">账号绑定</p>
 				<ul class="common-ul">
-					<li><i class="fa fa-mobile " aria-hidden="true"></i>手机<span class="tel">158****2312</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>手机<span class="tel">158****2312</span><i class="fa fa-angle-right nav-right"></i></li>
 					<li onclick="getServices('weixin')"><i class="fa fa-weixin" aria-hidden="true"></i>微信<span class="no-value weixin">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
 					<li onclick="getServices('qq')"><i class="fa fa-qq" aria-hidden="true"></i>QQ<span class="no-value qq">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
 					<li onclick="getServices('sinaweibo')"><i class="fa fa-weibo" aria-hidden="true"></i>微博<span class="no-value sinaweibo">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
-					<li>淘宝<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li><i class="fa fa-shopping-cart"></i>淘宝<span class="no-value">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
 				</ul>
 				<p class="ul-title">安全设置</p>
 				<ul class="common-ul">
@@ -83,6 +83,27 @@
             
 			function getServices(type){
 				if(localStorage.getItem(type) != null){
+					var typeName='';
+					switch (type){
+						case 'weixin':
+							typeName='微信';
+							break;
+						case 'qq':
+							typeName='QQ';
+							break;
+						case 'weibo':
+							typeName='新浪微博';
+							break;
+					}
+					// 事件处理  
+					plus.nativeUI.confirm("是否想要解绑"+typeName, function(event) {  
+					    var tapIndex = event.index;  
+					    switch (tapIndex) {  
+					        case 0 :   
+					            logout(auths[type],type);  
+					            break;
+					    }  
+					}, "饿了么", ["是", "否"]);  
 					
 				}else{
 					login(type)
@@ -105,6 +126,7 @@
 					}, false );
 					auth.login(function(){
 						w&&w.close();w=null;
+//						plus.nativeUI.alert(JSON.stringify(auth.authResult));
 						userinfo(auth,id);
 					},function(e){
 						w&&w.close();w=null;
@@ -138,19 +160,14 @@
 				});
 			}
 			
-			
-			function logoutOne(){
-				for(var i in auths){
-					console.log(auths[i]);
-					logout(auths[i]);
-				}
-			}
 			//注销登录
-			function logout(auth){
+			function logout(auth,type){
 				auth.logout(function(){
 					plus.nativeUI.alert("解除绑定\""+auth.description+"\"成功");
+					$('.'+type+'').html('未绑定');
+					localStorage.removeItem(type);
 				},function(e){
-					plus.nativeUI.alert("注销\""+auth.description+"\"失败："+e.message);
+					plus.nativeUI.alert("注销\""+auth.description+"\"失败："+e.code);
 				});
 			}
 			

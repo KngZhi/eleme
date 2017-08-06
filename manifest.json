@@ -209,7 +209,8 @@
 					"my.html",
 					"find.html",
 					"order.html",
-					"meishi.html"
+					"meishi.html",
+					"kfc.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -240,7 +241,9 @@
 					"img/kfc_logo.jpeg",
 					"data/shop-goods.json",
 					"js/bin/zepto.min.js",
-					"js/bin/iscroll-min.js"
+					"js/bin/iscroll-min.js",
+					"index.html",
+					"meishi.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -259,7 +262,8 @@
 					"css/page.css",
 					"setting.html",
 					"address.html",
-					"index.html"
+					"index.html",
+					"find.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -269,7 +273,8 @@
 					"css/style.css",
 					"images/back-arr.png",
 					"css/mypublic.css",
-					"index.html"
+					"index.html",
+					"my.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -294,7 +299,8 @@
 					"img/order-img1.png",
 					"find.html",
 					"my.html",
-					"evaluate.html"
+					"evaluate.html",
+					"index.html"
 				],
 				"refer": [],
 				"priority": 0
