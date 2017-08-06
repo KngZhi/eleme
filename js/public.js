@@ -64,6 +64,7 @@ function initSize(){
 
 //点击返回页面事件
 function returnPages(){
-	window.history.go(-1);
+	console.log(222);
+	window.history.back();  
 }
 >>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
