@@ -17,7 +17,7 @@
 			</div>
 			<section class="L_user_info L_flex_content">
 				<ul class="common-ul">
-					<li class="li-img">头像<img src="img/user-info-header.png" /><i class="fa fa-angle-right nav-right"></i></li>
+					<li class="li-img">头像<img class="info_header" src="img/user-info-header.png" onclick="galleryImg()"/><i class="fa fa-angle-right nav-right"></i></li>
 					<li>用户名<span class='username'>某某某</span><i class="fa fa-angle-right nav-right"></i></li>
 				</ul>
 				<p class="ul-title">账号绑定</p>
@@ -39,84 +39,84 @@
 		
 		<script type="text/javascript" src="js/jquery.js" ></script>
 		<script type="text/javascript">
-			var Storage =JSON.parse(localStorage.getItem('user'));
-			if(Storage !=null){
+			document.addEventListener('plusready',plusReady,false);
+			function plusReady(){
+				
+				
+				
+			}
+			
+			var src =localStorage.getItem('info_header');
+			var Storage = JSON.parse(localStorage.getItem('user'));
+			if(src != null){
+				 $('.info_header').attr('src',src);
 				var username = $('.username');
 				var tel = $('.tel')
 				username.html(Storage.username)
-				tel.html(Storage.tel);
-				document.addEventListener('plusready',plusReady,false);
-				
-				
-				
-				
-			}else{
-				
+				tel.html(Storage.tel);	
 			}
 			
-			
-			function plusReady(){
-				galleryImg()
-				
-				
-			}
-			
+              // 从相册中选择图片头像
 			function galleryImg(){
-				// 从相册中选择图片
 			    plus.gallery.pick(function(path){
-			    	console.log(path);
-			        showImg( path );
-			        createItem(path);
+					localStorage.setItem('info_header',path);
+					var src = localStorage.getItem('info_header');
+			       $('.info_header').attr('src',src);
 			    }, function(e){
-//			    	outSet('取消选择图片');
-			    }, {filter:'image'});
-			}
+			    	
+			    	}, {filter:'image'});
+			}	
 			
 			
 			
-			function showImg(url){
-			// 兼容以"file:"开头的情况
-			if(0!=url.indexOf('file://')){
-				url='file://'+url;
-			}
-			var _body_ = document.body;
-			var _div_ = document.createElement('div');
-			_div_.style.top='0px';
-			_div_.style.left='0px';
-			_div_.style.height='30%';
-			_div_.style.width='30%';
-			_div_.style.zIndex='99999';
-			_div_.style.position='fixed';
-			_div_.style.background='#ffffff';
-			_div_.id='imgShow';
-			_div_.onclick=closeImg;
-			var _img_=document.createElement('img');
-			_img_.src=url;
-			_img_.style.width='100%';
-			_body_.appendChild(_div_);
-			_div_.appendChild(_img_);
-		}
 			
-		function closeImg(){
-			var trnode=document.getElementById('imgShow');
-			trnode&&trnode.parentNode.removeChild(trnode);
-		}	
-		function createItem(path){
-			var li = document.createElement('li');
-			li.className = 'ditem';
-			li.innerHTML = '<span class="iplay"><font class="aname"></font><br/><font class="ainf"></font></span>';
-			li.setAttribute('onclick', 'displayMedia(this);' );
-			list.insertBefore(li, first.nextSibling);
-			var i = path.lastIndexOf('/');
-			if(i<0){
-				i = path.lastIndexOf('\\');
-			}
-			li.querySelector('.aname').innerText = path.substr(i+1);
-			li.querySelector('.ainf').innerText = path;
-			li.path = path;
-			// 设置空项不可见
-			first.style.display = 'none';
-		}	
+			
+			
+//			function showImg(url){
+//			// 兼容以"file:"开头的情况
+//			if(0!=url.indexOf('file://')){
+//				url='file://'+url;
+//				console.log(url);
+//				
+//			}
+//			var _body_ = document.body;
+//			var _div_ = document.createElement('div');
+//			_div_.style.top='0px';
+//			_div_.style.left='0px';
+//			_div_.style.height='30%';
+//			_div_.style.width='30%';
+//			_div_.style.zIndex='99999';
+//			_div_.style.position='fixed';
+//			_div_.style.background='#ffffff';
+//			_div_.id='imgShow';
+//			_div_.onclick=closeImg;
+//			var _img_=document.createElement('img');
+//			_img_.src=url;
+//			_img_.style.width='100%';
+//			_body_.appendChild(_div_);
+//			_div_.appendChild(_img_);
+//		}
+//			
+//		function closeImg(){
+//			var trnode=document.getElementById('imgShow');
+//			trnode&&trnode.parentNode.removeChild(trnode);
+//		}	
+//		function createItem(path){
+//			var li = document.createElement('li');
+//			li.className = 'ditem';
+//			li.innerHTML = '<span class="iplay"><font class="aname"></font><br/><font class="ainf"></font></span>';
+//			li.setAttribute('onclick', 'displayMedia(this);' );
+//			list.insertBefore(li, first.nextSibling);
+//			var i = path.lastIndexOf('/');
+//			if(i<0){
+//				i = path.lastIndexOf('\\');
+//			}
+//			li.querySelector('.aname').innerText = path.substr(i+1);
+//			li.querySelector('.ainf').innerText = path;
+//			li.path = path;
+//			// 设置空项不可见
+//			first.style.display = 'none';
+//		}	
 			
 		</script>
 		

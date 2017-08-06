@@ -44,3 +44,20 @@ function autoFillAdd (time) {
 		$('#address').val(specAdd.address)
 	}
 }
+
+function searchSession(name) {
+	var len = localStorage.length,
+        i =0,
+        orgList = []
+    for (i; i< len; i++) {
+        orgList.push(localStorage.key(i))
+    }
+    var tarList = orgList.filter(function (ele) {
+    	// 如果 Key ^ 是name 则返回它的键值
+          if (ele.indexOf(name) === 0) {
+              return ele
+          }
+        })
+    console.log(tarList)
+    return tarList;
+}

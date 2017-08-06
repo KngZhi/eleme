@@ -206,7 +206,10 @@
 					"js/bin/iscroll-min.js",
 					"css/bin/swiper-3.3.1.min.css",
 					"img/ic_rating_s.png",
-					"my.html"
+					"my.html",
+					"find.html",
+					"order.html",
+					"meishi.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -220,7 +223,8 @@
 					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
 					"css/bin/mobilereset.css",
 					"css/page.css",
-					"js/bin/zepto.min.js"
+					"js/bin/zepto.min.js",
+					"kfc.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -234,7 +238,8 @@
 					"css/page.css",
 					"img/kfc_logo.jpeg",
 					"data/shop-goods.json",
-					"js/bin/zepto.min.js"
+					"js/bin/zepto.min.js",
+					"js/bin/iscroll-min.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -251,7 +256,8 @@
 					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
 					"css/bin/mobilereset.css",
 					"css/page.css",
-					"setting.html"
+					"setting.html",
+					"address.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -274,7 +280,9 @@
 					"img/find-img3.png",
 					"img/find-img4.png",
 					"img/find-img2.png",
-					"img/find-food1.png"
+					"img/find-food1.png",
+					"order.html",
+					"my.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -282,7 +290,9 @@
 			"order.html": {
 				"resources": [
 					"img/order-img1.png",
-					"find.html"
+					"find.html",
+					"my.html",
+					"evaluate.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -304,6 +314,66 @@
 			"setting.html": {
 				"resources": [
 					"login.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"evaluate.html": {
+				"resources": [
+					"js/pages/evalutae.js",
+					"js/jquery.js",
+					"order.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"address.html": {
+				"resources": [
+					"images/icon-pen.png",
+					"css/style.css",
+					"images/icon-plus.png",
+					"images/back-arr.png",
+					"js/c-public.js",
+					"css/mypublic.css",
+					"js/public.js",
+					"js/jquery.js",
+					"create-address.html",
+					"my.html",
+					"alter-address.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"create-address.html": {
+				"resources": [
+					"js/public.js",
+					"css/style.css",
+					"images/back-arr.png",
+					"js/c-public.js",
+					"css/mypublic.css",
+					"js/jquery.js",
+					"address.html",
+					"search-address.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"search-address.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/public.js",
+					"css/style.css",
+					"images/back-arr.png",
+					"js/c-public.js",
+					"js/jquery.js",
+					"create-address.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"alter-address.html": {
+				"resources": [
+					"address.html"
 				],
 				"refer": [],
 				"priority": 0

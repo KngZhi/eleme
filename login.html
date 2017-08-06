@@ -19,19 +19,11 @@
     </header>
     <main class="login">
         <div class="account-wrap">
-<<<<<<< HEAD
-            <input type="text" name="username" placeholder="用户/邮箱/用户名">
-            <input type="password" name="password" placeholder="密码">
-        </div>
-        <section>
-            <button class="btn-confirm">登录</button>
-=======
             <input type="text" id="username" placeholder="用户/邮箱/用户名">
             <input type="password" id="password" placeholder="密码">
         </div>
         <section>
             <button class="btn-confirm" onclick="_login()">登录</button>
->>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
             <a href="#">忘记密码？</a>
         </section>
     </main>
@@ -43,8 +35,6 @@
             <!--<a href="#">微薄</a>-->
         <!--</section>-->
     </footer>
-<<<<<<< HEAD
-=======
     <script type="text/javascript">
     	function _login(){
     		var userID = $('#username').val();
@@ -88,13 +78,12 @@
     				}else{
     					window.location.href = 'index.html';
     					var str = '{"username":"'+user.userID+'","tel":13212327843}'
-    					localStorage.setItem('user',str)
+    					localStorage.setItem('account',str)
     				}
     			}
     		});
     	}
     	
-    </script>
->>>>>>> 993d9bfa026ac0c9018da52632319b899efa10e2
+   </script>
 </body>
 </html>

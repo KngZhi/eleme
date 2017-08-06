@@ -80,7 +80,11 @@
 		
 		<script type="text/javascript" src="js/jquery.js" ></script>
 		<script type="text/javascript">
-			var Storage =JSON.parse(localStorage.getItem('user'));
+			var Storage =JSON.parse(localStorage.getItem('account'));
+			var src =localStorage.getItem('info_header');
+			if(src != null){
+				$('.head-img').attr('src',src)
+			}
 			if(Storage !=null){
 				var oInfo= $('.menber-info')
 				oInfo.find('h3').html(Storage.username).siblings('p').html(Storage.tel);
