@@ -10,7 +10,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "kfc.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -205,7 +205,12 @@
 					"js/bin/zepto.min.js",
 					"js/bin/iscroll-min.js",
 					"css/bin/swiper-3.3.1.min.css",
-					"img/ic_rating_s.png"
+					"img/ic_rating_s.png",
+					"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+					"kfc.html",
+					"meishi.html",
+					"find.html",
+					"my.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -219,7 +224,8 @@
 					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
 					"css/bin/mobilereset.css",
 					"css/page.css",
-					"js/bin/zepto.min.js"
+					"js/bin/zepto.min.js",
+					"kfc.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -233,7 +239,107 @@
 					"css/page.css",
 					"img/kfc_logo.jpeg",
 					"data/shop-goods.json",
-					"js/bin/zepto.min.js"
+					"js/bin/zepto.min.js",
+					"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+					"shop-eva.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shop-eva.html": {
+				"resources": [
+					"img/lian2.png",
+					"img/shop-eva1.png",
+					"kfc.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"find.html": {
+				"resources": [
+					"img/find-img1.png",
+					"img/find-bar.png",
+					"img/find-img3.png",
+					"img/find-img4.png",
+					"img/find-img2.png",
+					"img/find-food1.png",
+					"order.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"order.html": {
+				"resources": [
+					"img/order-img1.png",
+					"evaluate.html",
+					"my.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"evaluate.html": {
+				"resources": [
+					"js/pages/evalutae.js",
+					"js/jquery.js",
+					"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+					"js/public.js",
+					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+					"css/bin/mobilereset.css",
+					"css/page.css",
+					"order.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"my.html": {
+				"resources": [
+					"img/header.png",
+					"login.html",
+					"setting.html",
+					"address.html",
+					"my-money.html",
+					"js/jquery.js",
+					"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+					"js/public.js",
+					"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+					"css/bin/mobilereset.css",
+					"css/page.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"css/style.css",
+					"images/back-arr.png",
+					"css/mypublic.css",
+					"my.html",
+					"js/public.js",
+					"js/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"setting.html": {
+				"resources": [
+					"my.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"address.html": {
+				"resources": [
+					"images/icon-pen.png",
+					"my.html",
+					"images/icon-plus.png",
+					"js/c-public.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"my-money.html": {
+				"resources": [
+					"my.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -242,7 +348,6 @@
 		"idle": {
 			"resources": [
 				"js/bin/mui.js",
-				"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
 				"fonts/mui.ttf",
 				"css/bin/font-awesome-4.7.0/css/font-awesome.css",
 				"css/bin/font-awesome-4.7.0/fonts/FontAwesome.otf",

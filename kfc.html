@@ -11,8 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/page.css" />
 		<script type="text/javascript" src="js/public.js"></script>
-		<script type="text/javascript" charset="utf-8"></script>
-  
 	</head>
 	<body>
 		<div class="E_kfc C_wrapper">
@@ -83,7 +81,7 @@
 				async:true,
 				dataType:'json',
 				success:function(data){
-					console.log(data)
+//					console.log(data)
 					var $aside =$('.aside')
 					var $wrap = $('.wrap');
 					$.each(data, function(index) {
@@ -96,7 +94,7 @@
 						$.each(goodsArr, function(index) {
 							var $card = $('<div class="card"></div>');
 							var $thisImg = $('<div class="imgs"><img src="'+goodsArr[index].img_url+'"/></div>');
-							console.log(goodsArr[index].img_url);
+//							console.log(goodsArr[index].img_url);
 							var $content = $('<div class="content"><h3 class="shopname">'+goodsArr[index].name+'</h3><p class="over">'+goodsArr[index].des+'</p><p><span class="sale">月售<i class="saleCount">'+goodsArr[index].num+'</i>份</span><span class="grade">　好评率<i>100%</i></span></p><p>¥<i>'+goodsArr[index].price+'</i></p></div>')
 							var $car = $('<span id="joinCar">+</span>');
 							$card.append($thisImg);

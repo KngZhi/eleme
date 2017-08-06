@@ -12,9 +12,19 @@
 			"js/bin/zepto.min.js",
 			"js/bin/iscroll-min.js",
 			"css/bin/swiper-3.3.1.min.css",
-			"img/ic_rating_s.png"
+			"img/ic_rating_s.png",
+			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+			"kfc.html",
+			"meishi.html",
+			"find.html",
+			"my.html"
 		],
-		"refer": []
+		"refer": [
+			"kfc.html",
+			"meishi.html",
+			"find.html",
+			"my.html"
+		]
 	},
 	"meishi.html": {
 		"resources": [
@@ -25,9 +35,12 @@
 			"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
 			"css/bin/mobilereset.css",
 			"css/page.css",
-			"js/bin/zepto.min.js"
+			"js/bin/zepto.min.js",
+			"kfc.html"
 		],
-		"refer": []
+		"refer": [
+			"kfc.html"
+		]
 	},
 	"kfc.html": {
 		"resources": [
@@ -38,7 +51,123 @@
 			"css/page.css",
 			"img/kfc_logo.jpeg",
 			"data/shop-goods.json",
-			"js/bin/zepto.min.js"
+			"js/bin/zepto.min.js",
+			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+			"shop-eva.html"
+		],
+		"refer": [
+			"shop-eva.html"
+		]
+	},
+	"shop-eva.html": {
+		"resources": [
+			"img/lian2.png",
+			"img/shop-eva1.png",
+			"kfc.html"
+		],
+		"refer": [
+			"kfc.html"
+		]
+	},
+	"find.html": {
+		"resources": [
+			"img/find-img1.png",
+			"img/find-bar.png",
+			"img/find-img3.png",
+			"img/find-img4.png",
+			"img/find-img2.png",
+			"img/find-food1.png",
+			"order.html"
+		],
+		"refer": [
+			"order.html"
+		]
+	},
+	"order.html": {
+		"resources": [
+			"img/order-img1.png",
+			"evaluate.html",
+			"my.html"
+		],
+		"refer": [
+			"evaluate.html",
+			"my.html"
+		]
+	},
+	"evaluate.html": {
+		"resources": [
+			"js/pages/evalutae.js",
+			"js/jquery.js",
+			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+			"js/public.js",
+			"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+			"css/bin/mobilereset.css",
+			"css/page.css",
+			"order.html"
+		],
+		"refer": [
+			"order.html"
+		]
+	},
+	"my.html": {
+		"resources": [
+			"img/header.png",
+			"login.html",
+			"setting.html",
+			"address.html",
+			"my-money.html",
+			"js/jquery.js",
+			"css/bin/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+			"js/public.js",
+			"css/bin/font-awesome-4.7.0/css/font-awesome.min.css",
+			"css/bin/mobilereset.css",
+			"css/page.css"
+		],
+		"refer": [
+			"login.html",
+			"setting.html",
+			"address.html",
+			"my-money.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"css/style.css",
+			"images/back-arr.png",
+			"css/mypublic.css",
+			"my.html",
+			"js/public.js",
+			"js/jquery.js"
+		],
+		"refer": [
+			"my.html"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"my.html"
+		],
+		"refer": [
+			"my.html"
+		]
+	},
+	"address.html": {
+		"resources": [
+			"images/icon-pen.png",
+			"my.html",
+			"images/icon-plus.png",
+			"js/c-public.js"
+		],
+		"refer": [
+			"my.html"
+		]
+	},
+	"my-money.html": {
+		"resources": [
+			"my.html"
+		],
+		"refer": [
+			"my.html"
 		]
 	}
 }
