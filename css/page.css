@@ -83,21 +83,36 @@ html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino San
 .E_kfc .info_wrap span:nth-of-type(1){text-align: center;font:0.18rem/0.26rem '' ; width:0.48rem;height:0.26rem ;background: #fdec0d;color: #4f1815;margin: 0 0.06rem 0 0.02rem;}
 .E_kfc .info_wrap span:nth-of-type(2){border: 1px solid #b8b1b4;text-align: center;font:0.16rem/0.26rem '' ;padding: 0 0.04rem;}
 .E_kfc .activity{padding-top:2.2rem ;background: #ffffff;padding-left: 0.26rem;box-sizing: border-box;}
-/* 添加 z-index 防止 iscroll 的内容遮住*/
 .E_kfc .tab_bar{height:0.66rem;font:0.24rem/0.66rem '';background: #ffffff; color: #151515;box-sizing: border-box;margin-bottom: 0.04rem;z-index: 10;}
 .E_kfc .tab_bar span{float: left;margin: 0 0.25rem;border-bottom: 0.03rem solid transparent;}
 .E_kfc .tab_bar .active{color: #0788ff;border-bottom-color: #0788ff;}
 .E_kfc .main{}
 .E_kfc .main .card{padding: 0.20rem 0 0.12rem 0;position: relative;}
 .E_kfc .main .card:first-child{border-top: none;}
-.E_kfc .main .card #joinCar{position: absolute;right: 0; bottom: 0.10rem;  width:0.4rem ;height:0.4rem;background: #2395ff;border-radius: 50%; color: #fff;text-align: center;font: 0.35rem/0.35rem '';}
 
-/*kng css*/
+/*kng css==================
+*/
+
+.E_kfc .main .card .icon-cal{position: absolute;bottom: 0.10rem;  width:0.4rem ;height:0.4rem;border-radius: 50%; text-align: center;font: 0.35rem/0.35rem '';}
+
+.E_kfc .main .card .icon-plus {right: 0; background: #2395ff;color: #fff;}
+.E_kfc .main .card .icon-minus { right: .9rem; background: #ffffff; color: #2395ff; visibility: hidden; border: 1px solid #2395ff}
+
+.E_kfc .main .card .cal-num {
+    position: absolute;
+    right: .55rem;
+    font: .35rem/.35rem '';
+    bottom: .14rem;
+    visibility: hidden;
+}
+
 #container {height: 6.04rem; flex: 1}
 .E_kfc .main {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+}
+
+#container .wrap {
+    width: 100%;
 }
 
 #aside {
@@ -108,6 +123,45 @@ html{font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino San
 .E_kfc .main .aside {
    width: 100%;
 }
+
+
+/* 添加 z-index 防止 iscroll 的内容遮住*/
+.E_kfc .tab_bar{z-index: 10;}
+.E_kfc .activity{z-index: 11}
+
+.E_kfc .icon-count {
+    border-radius: 40%;
+    background: rgba(255, 0, 0, .9);
+    color: #fff;
+    text-align: center;
+    text-indent: 0;
+    font: 0.16rem/0.25rem '';
+    visibility: hidden;
+}
+
+.E_kfc .icon-side {
+    width: .4rem;
+    height: .25rem;
+    position: relative;
+    visibility: hidden;
+}
+
+.Kfc_footer .sel_goods .e_box .count.count {
+    position: absolute;
+    right: -.2rem;
+    /*top: -0.2rem;*/
+    width: 0.5rem;
+    height: 0.35rem;
+    border-radius: 40%;
+}
+
+.asideOn {
+    border-left: 2px solid #00aaff;
+}
+
+/*=========================
+ */
+
 
 /*.E_kfc .main .aside{width:28%;float: left;}*/
 .E_kfc .main .aside li{border-bottom:2px solid #ededed;display: flex;align-items: center; background: #f8f8f8; }
