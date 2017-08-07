@@ -22,7 +22,7 @@
 				</ul>
 				<p class="ul-title">账号绑定</p>
 				<ul class="common-ul">
-					<li><i class="fa fa-phone" aria-hidden="true"></i>手机<span class="tel">158****2312</span><i class="fa fa-angle-right nav-right"></i></li>
+					<li onclick="getTel()"><i class="fa fa-phone" aria-hidden="true"></i>手机<span class="tel">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
 					<li onclick="getServices('weixin')"><i class="fa fa-weixin" aria-hidden="true"></i>微信<span class="no-value weixin">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
 					<li onclick="getServices('qq')"><i class="fa fa-qq" aria-hidden="true"></i>QQ<span class="no-value qq">未绑定</span><i class="fa fa-angle-right nav-right"></i></li>
 					<li onclick="getServices('sinaweibo')"><i class="fa fa-weibo" aria-hidden="true"></i>微博<span class="no-value sinaweibo">未设置</span><i class="fa fa-angle-right nav-right"></i></li>
@@ -51,9 +51,6 @@
 			var wxName = localStorage.getItem('weixin');
             var qqName = localStorage.getItem('qq');
             var wbName = localStorage.getItem('sinaweibo');
-            console.log(wxName)
-            console.log(qqName)
-            console.log(wbName)
             if(wxName != null){
             	$('.weixin').html(wxName);
             }
@@ -144,7 +141,6 @@
 					var src = localStorage.getItem('info_header');
 			       $('.info_header').attr('src',src);
 			    }, function(e){
-			    	
 			    	}, {filter:'image'});
 			}	
 
