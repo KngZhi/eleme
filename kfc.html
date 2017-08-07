@@ -2,143 +2,78 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<meta name="Keywords" content="" />
-	<meta name="" content="" />
-	<title>KFC</title>
-	<link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css" />
-	<link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/page.css" />
-	<script type="text/javascript" src="js/public.js"></script>
-	<script type="text/javascript" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="Keywords" content=""/>
+    <meta name="" content=""/>
+    <title>KFC</title>
+    <link rel="stylesheet" type="text/css" href="css/bin/mobilereset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bin/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/page.css"/>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" charset="utf-8"></script>
 
 </head>
 <body>
 <div class="E_kfc C_wrapper">
-	<div class="kfc_header">
-		<div class="top_Bar">
-			<!--xxx: 添加类使得可以回退-->
-			<a href="javascript:;" class="back hd-left" onclick="returnPages()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-			<div class="top_Bar_r">
-				<span>拼</span>
-				<span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-				<span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
-			</div>
-		</div>
-		<div class="info_wrap">
-			<a href="#" class="logo"><img src="img/kfc_logo.jpeg"/></a>
-			<div class="kfc_info">
-				<h3 class="title">肯德基宅急送　(九堡店) <i class="fa fa-chevron-right" aria-hidden="true"></i></h3>
-				<p class="over notice">公告：本餐厅不使用饿了吗配送，由肯德基宅急送配送</p>
-				<div class="band"><span>品牌</span><span>商家配送 · 约40分钟</span></div>
-			</div>
-		</div>
-	</div>
-	<div class="activity">
-		<p><i class="subtract">特</i>7折饿了么回味桶，向经典致敬</p>
-		<p><i>新</i>新用户下单立减17元(不与其它活动同享)</p>
-	</div>
+    <div class="kfc_header">
+        <div class="top_Bar">
+            <!--xxx: 添加类使得可以回退-->
+            <a href="#" class="back hd-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <div class="top_Bar_r">
+                <span>拼</span>
+                <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
+            </div>
+        </div>
+        <div class="info_wrap">
+            <a href="#" class="logo"><img src="img/kfc_logo.jpeg"/></a>
+            <div class="kfc_info">
+                <h3 class="title">肯德基宅急送　(九堡店) <i class="fa fa-chevron-right" aria-hidden="true"></i></h3>
+                <p class="over notice">公告：本餐厅不使用饿了吗配送，由肯德基宅急送配送</p>
+                <div class="band"><span>品牌</span><span>商家配送 · 约40分钟</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="activity">
+        <p><i class="subtract">特</i>7折饿了么回味桶，向经典致敬</p>
+        <p><i>新</i>新用户下单立减17元(不与其它活动同享)</p>
+    </div>
 
-	<div class="tab_bar">
-		<span class="active">商品</span>
-		<span>评分4.7分</span>
-	</div>
+    <div class="tab_bar">
+        <span class="active">商品</span>
+        <span>评分4.7分</span>
+    </div>
 
 
-	<div class="main">
+    <div class="main">
         <div id="aside">
             <ul class="aside"></ul>
         </div>
-		<div id="container">
-			<div class="wrap" > </div>
-		</div>
-	</div>
+        <div id="container">
+            <div class="wrap"></div>
+        </div>
+    </div>
 
-	<footer class="Kfc_footer">
-		<div class="sel_goods">
-			未选购商品
-			<div class="e_box"><span class="count">1</span></div>
-		</div>
-		<div class="carriage">
-			¥0起送
-		</div>
-	</footer>
+    <footer class="Kfc_footer">
+        <div class="sel_goods">
+            未选购商品
+            <div class="e_box">
+                <span class="count icon-count">0</span>
+            </div>
+            <div class="cal-box">
+                <i class="icon-cal icon-plus">+</i>
+                <i class="icon-cal icon-minus">-</i>
+            </div>
+        </div>
+        <div class="carriage">
+            ¥ 0 起送
+        </div>
+    </footer>
 </div>
-<script type="text/javascript" src="js/bin/zepto.min.js" ></script>
+<script type="text/javascript" src="js/bin/zepto.min.js"></script>
 <script type="text/javascript" src="js/bin/iscroll-min.js"></script>
-<script type="text/javascript">
-	$(function () {
-		var $aside =$('.aside')
-		var $wrap = $('.wrap')
-		var $tabBar = $('.tab_bar')
-		var $header = $('.kfc_header')
-		$.ajax({
-			type:"get",
-			url:"./data/shop-goods.json",
-			async:true,
-			dataType:'json',
-			success:function(data){
-				// 字符串拼接成卡片
-                var num = 0
-				$.each(data, function(index) {
-					num++;
-					var $menu = $('<li index="'+num+'"><span>'+data[index].typeName+'</span></li>')
-					$aside.append($menu);
-					var $item = $('<div class="item"></div>')
-					var $title = $('<h3 class="title" id="'+num+'"><span>'+data[index].typeName+'</span>'+data[index].typeDes+'</h3>');
-					$item.append($title);
-					var goodsArr = data[index].goods;
-					$.each(goodsArr, function(index) {
-						var $card = $('<div class="card"></div>');
-						var $thisImg = $('<div class="imgs"><img src="'+goodsArr[index].img_url+'"/></div>');
-						var $content = $('<div class="content"><h3 class="shopname">'+goodsArr[index].name+'</h3><p class="over">'+goodsArr[index].des+'</p><p><span class="sale">月售<i class="saleCount">'+goodsArr[index].num+'</i>份</span><span class="grade">　好评率<i>100%</i></span></p><p>¥<i>'+goodsArr[index].price+'</i></p></div>')
-						var $car = $('<span id="joinCar">+</span>');
-						$card.append($thisImg);
-						$card.append($content);
-						$card.append($car);
-						$item.append($card);
-					});
-					$wrap.append($item);
-				});
-                $('.aside').on('click', 'li', function () {
-                	console.log('run hash')
-                  window.location.href = 'kfc.html#' + $(this).attr('index')
-                })
-			},
-			complete: function () {
-				var myScroll, sideScroll;
-				$(window).scroll(function () {
-					var dis = $getEleDistance($header, $tabBar)
-					console.log(dis)
-					if (dis <= 5) {
-						console.log('run')
-						document.body.style.overflow = 'hidden'
-						myScroll = new IScroll('#container')
-                        sideScroll = new IScroll('#aside')
-					} else if(dis > 55.5) {
-                        document.body.style.overflow = 'auto';
-                    }
-                $('.wrap').scroll(function () {
-                	console.log('wrap')
-	                console.log($(this).scrollTop())
-                })
-				})
-              
-//                      console.log(dis)
-				function $getEleDistance ($eleOne, $eleTwo) {
-					var distance = null
-					return distance = $eleTwo.offset().top - $eleOne.offset().top - $eleOne.height();
-				}
-				function enableScroll(event, target) {
-					event.stopPropagation()
-					var dY = event.deltaY
-					var delta = -event.detail/3
-					console.log(dY, delta)
-				}
-			}
-		})
-	})
-</script>
+<script type="text/javascript" src="js/kfc.js"></script>
 </body>
 </html>
