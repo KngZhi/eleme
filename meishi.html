@@ -33,7 +33,7 @@
 				<ul class="select_Bar"><!--select_option-->
 					<li class="active1" onclick="sort('zhonghe')">综合排序</li>
 					<li onclick="sort('haoping')">好评优先</li>
-					<li onclick="sort('juli')">距离最近</li>
+					<li onclick="sort('num')">销量最高</li>
 					<li>筛选<i></i></li>
 				</ul>
 				
@@ -90,7 +90,7 @@
 		
 		<script type="text/javascript" src="js/bin/zepto.min.js" ></script>
 		<script type="text/javascript">
-			
+			sort('zhonghe');
 			function sort(type){
 				$.ajax({
 	       			type:"get",
@@ -99,58 +99,80 @@
 	       			dataType:'json',
 	       			success:function(data){
 	       				data=dataSort(data,type);
+	       				var $wrap = $('.wrap');
+	       				var card = '';
+	       				$wrap.empty();
+	       				$.each(data, function(index) {
+							 var kfcUrl='window.location="kfc.html"';
+	       					 card += '<div class="card" onclick='+kfcUrl+'>'
+										+'<div class="logo"><img src="'+data[index].img_url+'"/></div>'
+										+'<div class="content">'
+											+'<h3 class="shopname">'+data[index].name+'</h3>'
+											+'<div class="info-icon"></div>'
+											+'<section class="estimate">'
+												+'<i class="star"></i><span class="grade">'+data[index].grade+'</span><span class="sale">月售<b class="saleCount">'+data[index].num+'</b>单</span>'
+											+'</section>'
+											+'<section class="carriage">'
+											+'	<p><span>¥<i>'+data[index].start_pri+'</i>起送</span><i class="line">|</i><span>配送费¥<i>'+data[index].packing_fee+'</i></span></p>'
+												+'<p><span class="distance">1.35km</span><i class="line">|</i><span class="waitingTime">36分钟</span></p>'
+											+'</section>'
+											+'<section class="activity">'
+											+'	<p><i class="new">新</i><span>新用户下单立减少17.0元</span></p>'
+												+'<p><i class="subtract">减</i><span>满40减8</span></p>'
+											+'</section>'
+										+'</div>'
+									+'</div>'
+	       				});
+	       				$wrap.append(card);	
 	   				}
        			});
 			}
 			
 			function dataSort(data,type){
 				if(type=='zhonghe'){
+					$('.select_Bar').find('li').eq(0).addClass('active1').siblings('li').removeClass('active1');
 					return data;
 				}
 				if(type=='haoping'){
-					var
-					return data;
+					$('.select_Bar').find('li').eq(1).addClass('active1').siblings('li').removeClass('active1');
+					var newArr=[];
+					newArr[0]=data[0];
+					for (var i=1;i<data.length;i++) {
+						for(var j=0;j<newArr.length;j++){
+							if(data[i].grade>newArr[j].grade){
+								newArr.splice(j,0,data[i]);
+								j++;
+								break;
+							}
+							if(j==newArr.length-1){
+								newArr.push(data[i]);
+								j++;
+							}
+							
+						}
+					}
+					return newArr;
 				}
-				if(type=='juli'){
-					return data;
+				if(type=='num'){
+					$('.select_Bar').find('li').eq(2).addClass('active1').siblings('li').removeClass('active1');
+					var newArr=[];
+					newArr[0]=data[0];
+					for (var i=1;i<data.length;i++) {
+						for(var j=0;j<newArr.length;j++){
+							if(data[i].num>newArr[j].num){
+								newArr.splice(j,0,data[i]);
+								j++;
+								break;
+							}
+							if(j==newArr.length-1){
+								newArr.push(data[i]);
+								j++;
+							}
+						}
+					}
+					return newArr;
 				}
 			}
-			
-			$.ajax({
-       			type:"get",
-       			url:"./data/shops.json",
-       			async:true,
-       			dataType:'json',
-       			success:function(data){
-       				var $wrap = $('.wrap')
-       				var card = '';
-       				data=sort(data);
-       				$.each(data, function(index) {
-						 var kfcUrl='window.location="kfc.html"';
-       					 card += '<div class="card" onclick='+kfcUrl+'>'
-									+'<div class="logo"><img src="'+data[index].img_url+'"/></div>'
-									+'<div class="content">'
-										+'<h3 class="shopname">'+data[index].name+'</h3>'
-										+'<div class="info-icon"></div>'
-										+'<section class="estimate">'
-											+'<i class="star"></i><span class="grade">'+data[index].grade+'</span><span class="sale">月售<b class="saleCount">'+data[index].num+'</b>单</span>'
-										+'</section>'
-										+'<section class="carriage">'
-										+'	<p><span>¥<i>'+data[index].start_pri+'</i>起送</span><i class="line">|</i><span>配送费¥<i>'+data[index].packing_fee+'</i></span></p>'
-											+'<p><span class="distance">1.35km</span><i class="line">|</i><span class="waitingTime">36分钟</span></p>'
-										+'</section>'
-										+'<section class="activity">'
-										+'	<p><i class="new">新</i><span>新用户下单立减少17.0元</span></p>'
-											+'<p><i class="subtract">减</i><span>满40减8</span></p>'
-										+'</section>'
-									+'</div>'
-								+'</div>'
-       				});
-       				 $wrap.append(card);
-       			}
-       	});
-       	
-       	
 		</script>
 	</body>
 
